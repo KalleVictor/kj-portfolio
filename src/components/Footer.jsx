@@ -9,7 +9,7 @@ import cv from '../assets/images/cv.png';
 
 const socialLinks = [
   {
-    href: 'https://kallevictor.github.io/CV/',
+    href: 'https://github.com/KalleVictor',
     alt: 'GitHub',
     image: github,
   },
