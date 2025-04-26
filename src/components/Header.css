@@ -1,0 +1,99 @@
+header {
+  background-color: black;
+  color: white;
+  max-width: 900px;
+  height: 4rem;
+
+}
+
+  /* Desktop nav */
+  .nav-desktop ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  nav{
+    display: flex;
+    justify-content: right;
+    margin-top: -3rem;
+    margin-right: 2rem;
+  }
+  
+  .headerbtn {
+    color: white;
+    text-decoration: none;
+    font-size: 1.0em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  .headerbtn:hover {
+    color: lightblue; 
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+  }
+  .headerbtn.active {
+    text-decoration: line-through;
+  }
+  .header h1{
+    text-align: start;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+
+
+
+  /* Responsive styles for the header */
+
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  z-index: 1000; /* Ensure the hamburger is above other elements */
+}
+
+  /* Nav menu for mobile */
+.nav-menu {
+  display: none;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 10px;
+  background: white;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 10px;
+  border: solid 1px black;
+  box-shadow: #282c34 0px 4px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.nav-menu.open {
+  display: flex;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+
+  padding: 10px 20px;
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+}
+

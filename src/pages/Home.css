@@ -1,0 +1,89 @@
+
+  @media screen and (max-width: 768px) {
+    .CardTitle {
+      font-size: 0.7rem;
+      margin-top: -2rem;
+    }
+    
+  }
+  
+  .arrow-btn {
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .arrow-btn:hover {
+    text-shadow: lightblue 0px 0px 10px; 
+  }
+  
+  .arrow-btn.left {
+    left: -2.5rem;
+  }
+  .arrow-btn.left:hover {
+
+    transition: all 0.3s ease;
+  }
+
+  .arrow-btn.right {
+    right: -2.5rem;
+  }
+  .arrow-btn.right:hover {
+
+    transition: all 0.3s ease;
+  }
+
+.swipe-hint-container {
+  display: none;
+}
+
+.swipe-hint2 {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .swipe-hint2 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    opacity: 0.2;
+    transform: translateY(-50%);
+    animation: pulse 2s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .swipe-hint2.left {
+    left: -1.6rem;
+  }
+
+  .swipe-hint2.right {
+    right: -1.6rem;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.5; }
+  }
+}
+
+  .card-image {
+    width: 50px;
+    height: auto;
+  }
+
+    /* Hides the arrows on screens 768px and below */
+@media (max-width: 768px) {
+  .arrow-btn {
+    display: none;
+  }
+  .card-image {
+    display: none;
+  }
+}

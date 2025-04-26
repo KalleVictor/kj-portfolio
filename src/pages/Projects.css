@@ -1,0 +1,107 @@
+/* Project container base styles */
+.projects-swiper,
+.projects-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Cards shared styles */
+.project-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.project-info h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Desktop grid layout */
+.projects-grid {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .projects-swiper {
+    display: none;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Swipe hint for mobile */
+.swipe-hint {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  position: relative !important;
+  bottom: auto !important;
+  color: #aaa;
+  animation: fadeInOut 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* Move pagination (The dots) under the Swiper */
+.swiper-pagination {
+  margin-top: 12px;
+  position: relative !important;
+  bottom: auto !important;
+}
+
+.project-button {
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .project-button:hover {
+    background-color: lightblue;
+  }
+  
+  .project-cta {
+    margin-top: 0.5rem;
+  }

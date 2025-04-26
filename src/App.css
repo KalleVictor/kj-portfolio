@@ -1,38 +1,100 @@
-.App {
+.container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  text-align: justify;
+}
+.container p {
+  line-height: 1.6; /* Improves readability */
+  overflow: hidden; /* Ensures text wraps cleanly around the image */
+}
+
+.card-container {
+  margin-top: 3rem;
+  background-color: lightblue;
+  padding: 5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.CardTitle {
+  color: #333;
+  margin-top: -2.5rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.expand-button {
+  color: #5e5e5e;
+  background-color: lightgray;
+  border-radius: 50%;
+  border: none;
+  text-decoration: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+.expand-button:hover {
+  color: black;
+  background-color: #61dafb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-swipe-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  min-width: 16rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-swipe-wrapper p {
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  color: #333;
+}
+
+.container2 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Centers content horizontally */
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.profilBild {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes image round */
+  shape-outside: circle(50%); /* Defines circular wrapping area */
+  float: left; /* Allows text to wrap around both sides */
+  margin: 10px 20px 10px 0; /* Space around image */
+  object-fit: cover; /* Ensures image fits nicely */
+}
+.wrapped-text {
+  line-height: 1.6; /* Improves readability */
+  text-align: justify; /* Optional: evens out text */
+  overflow: hidden; /* Ensures clean wrapping */
+  margin-top: -10rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
 }
