@@ -1,0 +1,97 @@
+.testimonials-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+.banner {
+    background-color: black;
+    color: white;
+}
+  
+  /* Desktop Grid */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  /* Desktop Card */
+  .testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px) scale(1.1);
+    background-color: lightblue;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+  
+  
+  /* Mobile Swiper */
+  .testimonials-swiper {
+    display: none;
+  }
+  
+  /* Mobile-specific card */
+  .testimonial-card-mobile {
+    background: white;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 90%;
+    box-sizing: border-box;
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-card h3,
+  .testimonial-card-mobile h3 {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1.2rem;
+  }
+  
+  .testimonial-card h4,
+  .testimonial-card-mobile h4 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .testimonial-quote {
+    font-style: italic;
+    color: #444;
+    min-height: 4rem;
+  }
+  
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      display: none; /* Hide desktop on mobile */
+    }
+    .testimonials-swiper {
+      display: block; /* Show swiper on mobile */
+      padding: 1rem 0;
+    }
+  }
+  

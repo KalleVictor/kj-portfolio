@@ -32,11 +32,35 @@ const projectItems = [
     link: 'https://github.com/KalleVictor/ToDoDonelyApp',
     linkType: 'github',
   },
+
+  {
+    image: bloodbowl,
+    title: 'Blood Bowl - Legendary Edition',
+    description: 'Game Designer on Blood Bowl: Legendary Edition, adapting the iconic tabletop game for PC and consoles. Designed core gameplay systems, the AI behaviour and single-player campaign, and new online features. The release was praised by the community for its faithful design.',
+    link: 'https://store.steampowered.com/app/58520/Blood_Bowl__Legendary_Edition/',
+    linkType: 'steam',
+  },
+  {
+    image: munamii,
+    title: 'Munamii Cakery',
+    description: 'A sleek website for Munamii Cakery, showcasing their brand and products with an intuitive, mobile-first design.',
+    link: 'https://kallevictor.github.io/Munamii-React/',
+    linkType: 'website',
+  },
+  {
+    image: tododonely,
+    title: 'ToDoDonely App',
+    description: 'ToDoDonely is a console-based task manager built with C#, supporting task viewing, adding, editing, and saving.',
+    link: 'https://github.com/KalleVictor/ToDoDonelyApp',
+    linkType: 'github',
+  },
+
 ];
 
 export default function Projects() {
   return (
     <div>
+      <h1>Worksamples</h1>
       {/* Mobile Swiper */}
       <div className="projects-swiper">
         <Swiper

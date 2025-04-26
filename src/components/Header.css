@@ -1,22 +1,35 @@
 header {
+  position: relative;
   background-color: black;
-  color: white;
-  max-width: 900px;
-  height: 4rem;
-
+  display: flex;
+  height: 6rem;
+}
+@media (max-width: 600px) {
+  .header {
+    height: 3rem;   
+  }
 }
 
   /* Desktop nav */
+
+  .nav-desktop {
+    position: absolute;
+    bottom: 0rem;
+    right: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
   .nav-desktop ul {
     display: flex;
+    color: white;
     gap: 20px;
     list-style: none;
   }
+  
   nav{
     display: flex;
     justify-content: right;
-    margin-top: -3rem;
-    margin-right: 2rem;
   }
   
   .headerbtn {
@@ -50,7 +63,7 @@ header {
   cursor: pointer;
   display: none;
   position: absolute;
-  top: 1.5rem;
+  top: 0rem;
   right: 1rem;
   z-index: 1000; /* Ensure the hamburger is above other elements */
 }
@@ -72,6 +85,8 @@ header {
   border: solid 1px black;
   box-shadow: #282c34 0px 4px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  top: 0rem;
+  right: 3rem;
 }
 
 .nav-menu.open {
@@ -96,4 +111,27 @@ header {
   }
 
 }
+.portfolio {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  height: 150px;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
 
+/* keyframes for smooth fade */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    height: 80px;
+    top: 0rem;
+    left: 0rem;
+  }
+}

@@ -4,19 +4,20 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: rem;
 }
 
 /* Cards shared styles */
 .project-card {
-  background: #fff;
+  background: white;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: solid 2px black;
   padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.1rem;
   text-decoration: none;
   color: inherit;
   height: 100%;
@@ -27,6 +28,8 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  background-color: lightblue;
+
 }
 
 .project-image {
@@ -48,7 +51,10 @@
 
 /* Desktop grid layout */
 .projects-grid {
+  display: flex;
   display: none;
+  padding: 2rem;
+  max-width: 900px;
 }
 
 @media (min-width: 768px) {
@@ -67,7 +73,6 @@
 .swipe-hint {
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 0.3rem;
   position: relative !important;
   bottom: auto !important;
   color: #aaa;
@@ -81,7 +86,6 @@
 
 /* Move pagination (The dots) under the Swiper */
 .swiper-pagination {
-  margin-top: 12px;
   position: relative !important;
   bottom: auto !important;
 }
@@ -99,9 +103,12 @@
   }
   
   .project-button:hover {
-    background-color: lightblue;
+    background-color: white;
+    color: #222;
   }
   
   .project-cta {
     margin-top: 0.5rem;
   }
+
+  

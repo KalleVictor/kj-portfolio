@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router'; // Make sure it's react-router-dom
-import { NavLink } from 'react-router'; // Import NavLink for active link styling
+import { Link, } from 'react-router';
+import { NavLink } from 'react-router'; 
 import './Header.css';
+import PortfolioHeader from '../assets/images/PortfolioHeader.png';
 
 
 export default function Header() {
@@ -11,10 +12,13 @@ export default function Header() {
 
   return (
     <header className="header">
-      <h1 className="header-text">Just Another Portfolio</h1>
+
+      <img src={PortfolioHeader} alt="portfolio" className="portfolio" />
+
       <button className="hamburger" onClick={toggleMenu}>
         ☰
       </button>
+
       <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
           <li><Link to="./home" onClick={toggleMenu}>Home</Link></li>
@@ -41,6 +45,7 @@ export default function Header() {
           </NavLink>•
         </ul>
       </nav>
+
     </header>
   );
 }

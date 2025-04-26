@@ -1,7 +1,7 @@
 footer {
     background-color: black;
     color: white;
-    max-width: 900px;
+    max-width: 1024px;
     height: 2rem;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
   }
@@ -45,6 +45,8 @@ footer {
     align-items: auto;
     gap: 10px;
     margin-right: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
   }
 
   .icon-btn {
@@ -52,19 +54,17 @@ footer {
     border-radius: 10%;
     padding: 0% auto;
     border: solid 1px white;
-    border-radius: 20px;
+    border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    margin-top: 0.3rem;
   }
   
   .icon-btn:hover {
-    transform: scale(1.1);
     background-color: #e0e0e0;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   }
   .icon-btn img {
-    width: 20px;
+    width: 30px;
     height: auto;
     display: block;
 
