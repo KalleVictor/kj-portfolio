@@ -45,6 +45,12 @@
   justify-content: center;
 }
 
+.CardTitle h1{
+  font-family: Freestyle Script;
+  font-size: 3rem;
+  margin-top: 6rem;
+}
+
 .card {
   background-color: white;
   border-radius: 12px;
@@ -54,7 +60,7 @@
   position: relative;
 }
 .card:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  background-color: lightblue;
   transition: all 0.3s ease;
 }
 

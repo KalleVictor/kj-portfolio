@@ -54,10 +54,7 @@ export default function Home() {
       title: 'Programmer?',
       body: (
         <>
-          <p><img src={Pin} alt="Pin" className= "Pin" />01001001 00100000 01100001 01101101</p>
-          <p>Syntax Error...</p>
-          <p>404: Page not found</p>
-          <p>Alt-F4</p>
+          <p><img src={Pin} alt="Pin" className= "Pin" />01001001 00100000 01100011 01100001 01101110 00100000 01100011 01101111 01100100 01100101 00100000 01100001 00100000 01100010 01101001 01110100</p>
         </>
       ),
       background: 'rgba(213, 213, 214, 0.9)',

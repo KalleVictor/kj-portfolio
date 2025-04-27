@@ -16,10 +16,6 @@
   border: solid 5px white;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.9); /* White circular shadow */
 }
-.card .CardTitle h1{
-  font-family: Freestyle Script;
-  margin-top: 6rem;
-}
 
 .card {
   width: 240px;
@@ -72,7 +68,7 @@
     flex-direction: column;
   }
   .card {
-    max-width: 250px;
+    max-width: 240px;
     margin-bottom: -3rem;
   }
   .card .Pin {
@@ -110,7 +106,7 @@
 
 .AboutProfilePic {
   height: 80px;
-  padding: 20px;
+  padding-top: 50px;
 }
 
 .card-front {
@@ -158,4 +154,3 @@
 .shake {
   animation: shake 0.5s;
 }
-

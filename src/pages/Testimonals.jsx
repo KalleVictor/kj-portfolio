@@ -2,41 +2,21 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import './Testimonials.css';
 
+
 const testimonials = [
+  {
+    image: 'https://kallevictor.github.io/CV/images/profilbild6.jpg',
+    name: 'Karl-Johan Victor',
+    title: 'Game Designer & Storyteller',
+    quote: 'Building meaningful connections fuels my creativity, and I cherish the opportunity to share stories of collaboration through testimonials and referrals.',
+    link: 'https://github.com/KalleVictor',
+  },
   {
     image: 'https://media.licdn.com/dms/image/v2/D4E35AQEm3mOWtAIrnA/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1729176865014?e=1746313200&v=beta&t=EhzJ6jZTg3Tp6WV13A-glaRPq4hDVVg4LA2Xs0phEKQ',
     name: 'Saïda Mirzoeva',
     title: 'Game Producer',
     quote: 'His knowledge and experience outside the scope of the video game industry is super easily valuable in a multicultural and inclusive team.',
     link: 'https://www.linkedin.com/in/saidasiam/',
-  },
-  {
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
-    name: 'Jane Smith',
-    title: 'Product Manager at InnovateX',
-    quote: 'Creative, reliable, and technically brilliant. I would work with Kalle again without hesitation!',
-    link: 'https://github.com/KalleVictor',
-  },
-  {
-    image: 'https://randomuser.me/api/portraits/men/55.jpg',
-    name: 'David Johnson',
-    title: 'Game Designer at PlayVerse',
-    quote: 'Kalle brought passion and energy to every project, pushing the boundaries of design and gameplay.',
-    link: 'https://github.com/KalleVictor',
-  },
-  {
-    image: 'https://randomuser.me/api/portraits/women/65.jpg',
-    name: 'Emily Brown',
-    title: 'UX Designer at PixelPerfect',
-    quote: 'An incredible eye for detail and a deep understanding of user needs. A truly valuable asset to any team.',
-    link: 'https://github.com/KalleVictor',
-  },
-  {
-    image: 'https://randomuser.me/api/portraits/women/65.jpg',
-    name: 'Emily Brown',
-    title: 'UX Designer at PixelPerfect',
-    quote: 'An incredible eye for detail and a deep understanding of user needs. A truly valuable asset to any team.',
-    link: 'https://github.com/KalleVictor',
   },
 ];
 

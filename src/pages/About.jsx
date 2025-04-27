@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Home.css';
+import '../App.css'
 
 import Logic from '../assets/images/logic.svg';
 import Personality from '../assets/images/personality.svg';
@@ -31,13 +32,13 @@ export default function About() {
       title: 'My Personality',
       description: '<strong>Personality:</strong> Described as collaborative, calm under pressure, and open to new perspectives — suited to creative, team-oriented environments.',
       link: 'https://kallevictor.github.io/CV/pdf/Alva%20Labs%20Personality%20Test%20Report%20-%20Karl-Johan%20Victor-2.pdf',
-      frontBg: 'rgba(213, 213, 214, 0.9)',
+      frontBg: '#f3f3f3',
       backBg: 'white',
     },
     {
       image: DidYouKnow,
       title: 'Did you know?',
-      description: 'As a child I was inspired by the worlds of Conan, Lord of the Rings, and Dune—as well as classic RPGs and tabletop games.',
+      description: 'As a child, I was inspired by the worlds of Robert E. Howard’s Conan, J.R.R. Tolkien’s Lord of the Rings, and Frank Herbert’s Dune, alongside classic RPGs and tabletop games.',
       link: null, // No link anymore
       frontBg: 'rgba(213, 213, 214, 0.9)',
       backBg: 'white',
@@ -48,21 +49,21 @@ export default function About() {
     {
       image: Quill,
       title: 'Creative Designer',
-      description: 'From a young age, I enjoyed crafting detailed fantasy worlds, characters, and narratives, blending storytelling and logic.',
+      description: 'From a young age, I channeled this passion into crafting intricate fantasy worlds, characters, and narratives, weaving together rich storytelling with the strategic logic of gameplay.',
       frontBg: '#e3e3e3',
       backBg: '#ffffff',
     },
     {
       image: Passion,
-      title: 'Passion for Games',
-      description: 'Years of game design, development, and testing—bringing immersive experiences to life in both tabletop and digital formats I find quite exciting.',
+      title: 'Passion for Interactive Games',
+      description: 'Through years of game design, development, and testing, I’ve brought immersive experiences to life in both tabletop and digital formats, a process I find deeply exhilarating.',
       frontBg: '#d3d3d3',
       backBg: '#ffffff',
     },
     {
       image: Explorer,
       title: 'Explorer at Heart',
-      description: 'Always curious about new cultures, technologies, and ideas—believing that the best innovation comes from diverse influences.',
+      description: 'Driven by a lifelong curiosity for new cultures, technologies, and ideas, I believe the most impactful innovations arise from embracing diverse influences.',
       frontBg: '#f3f3f3',
       backBg: '#ffffff',
     },
