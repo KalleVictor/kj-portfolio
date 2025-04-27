@@ -11,12 +11,12 @@ import Quill from '../assets/images/quill.svg';
 import Passion from '../assets/images/controller.svg'; 
 import Explorer from '../assets/images/explorer.svg'; 
 
-
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [showExtraCards, setShowExtraCards] = useState(false);
   const [extraActive, setExtraActive] = useState({});
   const [shakeAbout, setShakeAbout] = useState({});
+  const [shakeExtra, setShakeExtra] = useState({});
 
   const aboutCards = [
     {
@@ -39,7 +39,7 @@ export default function About() {
       image: DidYouKnow,
       title: 'Did you know?',
       description: 'As a child, I was inspired by the worlds of Robert E. Howard’s Conan, J.R.R. Tolkien’s Lord of the Rings, and Frank Herbert’s Dune, alongside classic RPGs and tabletop games.',
-      link: null, // No link anymore
+      link: null,
       frontBg: 'rgba(213, 213, 214, 0.9)',
       backBg: 'white',
     },
@@ -55,8 +55,8 @@ export default function About() {
     },
     {
       image: Passion,
-      title: 'Passion for Interactive Games',
-      description: 'Through years of game design, development, and testing, I’ve brought immersive experiences to life in both tabletop and digital formats, a process I find deeply exhilarating.',
+      title: 'Passion for Games',
+      description: 'Through years of game design, development, and testing, I’ve brought immersive experiences to life in digital formats, a process I find deeply exhilarating.',
       frontBg: '#d3d3d3',
       backBg: '#ffffff',
     },
@@ -80,6 +80,20 @@ export default function About() {
     setExtraActive(prev => ({
       ...prev,
       [index]: !prev[index],
+    }));
+  };
+
+  const handleCardHover = (index, isHovering) => {
+    setShakeAbout(prev => ({
+      ...prev,
+      [`hover-${index}`]: isHovering,
+    }));
+  };
+
+  const handleExtraCardHover = (index, isHovering) => {
+    setShakeExtra(prev => ({
+      ...prev,
+      [`hover-${index}`]: isHovering,
     }));
   };
 
@@ -108,7 +122,7 @@ export default function About() {
     Object.entries(extraActive).forEach(([index, isActive]) => {
       if (isActive) {
         const timer = setTimeout(() => {
-          setExtraActive(prev => ({
+          setShakeExtra(prev => ({
             ...prev,
             [`shake-${index}`]: true,
           }));
@@ -138,12 +152,14 @@ export default function About() {
       <div className="card-deck">
         {aboutCards.map((card, index) => {
           const isActive = activeIndex === index;
-          const isShaking = shakeAbout[index];
+          const isShaking = shakeAbout[index] || shakeAbout[`hover-${index}`];
           return (
             <motion.div
               key={index}
               className={`card-container2 ${isShaking ? 'shake' : ''}`}
               onClick={() => handleCardClick(index)}
+              onMouseEnter={() => handleCardHover(index, true)}
+              onMouseLeave={() => handleCardHover(index, false)}
             >
               <motion.div
                 className="card-flip-inner"
@@ -189,27 +205,29 @@ export default function About() {
       </div>
 
       {showExtraCards && (
-  <motion.div
-    className="card-deck"
-    initial="hidden"
-    animate="show"
-    variants={{
-      hidden: {},
-      show: {
-        transition: {
-          staggerChildren: 0.2,
-        },
-      },
-    }}
-  >
+        <motion.div
+          className="card-deck"
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
           {extraCards.map((card, index) => {
             const isFlipped = extraActive[index];
-            const isShaking = extraActive[`shake-${index}`];
+            const isShaking = shakeExtra[`shake-${index}`] || shakeExtra[`hover-${index}`];
             return (
               <motion.div
                 key={`extra-${index}`}
                 className={`card-container2 ${isShaking ? 'shake' : ''}`}
                 onClick={() => handleExtraCardClick(index)}
+                onMouseEnter={() => handleExtraCardHover(index, true)}
+                onMouseLeave={() => handleExtraCardHover(index, false)}
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },

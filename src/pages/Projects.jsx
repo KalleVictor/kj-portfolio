@@ -7,6 +7,8 @@ import tododonely from '../assets/images/tododonely.png';
 import bloodbowl from '../assets/images/bloodbowl.png';
 import munamii from '../assets/images/munamii.png';
 import Worksamples from '../assets/header/Worksamples.png';
+import portfolioproject from '../assets/images/portfolioproject.png'
+import curriculumvitae from '../assets/images/CurriculumVitae.png';
 
 const projectItems = [
   {
@@ -17,18 +19,25 @@ const projectItems = [
     linkType: 'steam',
   },
   {
+    image: portfolioproject,
+    title: 'Portfolio Project',
+    description: 'My Portfolio, crafted with React, highlighting my Fullstack expertise.',
+    link: 'https://github.com/KalleVictor/kj-portfolio',
+    linkType: 'github',
+  },
+  {
+    image: curriculumvitae,
+    title: 'Curriculum Vitae',
+    description: 'My Curriculum Vitae, crafted with HTML, CSS, and JavaScript, highlighting my expertise and design skills.',
+    link: 'https://github.com/KalleVictor/cv',
+    linkType: 'github',
+  },
+  {
     image: munamii,
     title: 'Munamii Cakery',
     description: 'A sleek website for Munamii Cakery, showcasing their brand and products with an intuitive, mobile-first design.',
     link: 'https://kallevictor.github.io/Munamii-React/',
     linkType: 'website',
-  },
-  {
-    image: tododonely,
-    title: 'ToDoDonely App',
-    description: 'ToDoDonely is a console-based task manager built with C#, supporting task viewing, adding, editing, and saving.',
-    link: 'https://github.com/KalleVictor/ToDoDonelyApp',
-    linkType: 'github',
   },
   {
     image: tododonely,

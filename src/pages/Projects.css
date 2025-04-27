@@ -8,7 +8,7 @@
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center if 1-2 projects */
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }
@@ -25,11 +25,18 @@
   display: flex;
   flex-direction: column;
 }
+.project-card:hover {
+  background-color: lightblue;
+  transition: background-color 1s, border 1s;
+  border: solid 1px lightblue;
+
+}
 
 .project-image {
-  width: 100%;
+  width: 260px;
   height: auto;
-  object-fit: cover;
+  padding: 1rem;
+  margin-bottom: -2rem;
 }
 
 .project-info {
@@ -37,12 +44,14 @@
 }
 
 .project-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-family: Freestyle Script;
+  margin-bottom: 1rem;
 }
 
 .project-info p {
   font-size: 1rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 

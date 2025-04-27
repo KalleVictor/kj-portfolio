@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import profilbild from '../assets/images/profilbild6.jpg';
 import ContactMe from '../assets/header/Contact.png';
 import './Contact.css'; // <-- create this
@@ -26,11 +26,17 @@ export default function Contact() {
           <p className="title">Fullstack Developer, Game Designer</p>
           <p>Lunds University</p>
           <div className="social-icons">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/KalleVictor/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} size="lg" />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/karl-johan-victor-90197659/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            </a>
+            <a href="tel:+46703152644" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faPhone} size="lg" />
+            </a>
+            <a href="mailto:karljohan.victor@hotmail.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faEnvelope} size="lg" />
             </a>
           </div>
           <button2 className="contact-btn" onClick={handleButtonClick}>

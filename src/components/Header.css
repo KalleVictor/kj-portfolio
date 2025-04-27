@@ -1,13 +1,51 @@
-header {
-  position: relative;
-  background-color: black;
+.header {
+  position: fixed;
+  top: 0;
+  height: 4rem;
+
+  width: 100%;
+  max-width: 1024px;
+  background: black;
+  padding: 1rem;
   display: flex;
-  height: 6rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
+
+.titleportfolio {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  height: 90px;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.header.visible {
+  transform: translateY(0);
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+}
+
 @media (max-width: 600px) {
   .header {
     height: 3rem;   
   }
+  .titleportfolio {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 70px;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
 }
 
   /* Desktop nav */
@@ -64,7 +102,7 @@ header {
   display: none;
   position: absolute;
   top: 0rem;
-  right: 1rem;
+  right: 2rem;
   z-index: 1000; /* Ensure the hamburger is above other elements */
 }
 
@@ -111,15 +149,7 @@ header {
   }
 
 }
-.portfolio {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  height: 90px;
-  z-index: 1000;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-}
+
 
 /* keyframes for smooth fade */
 @keyframes fadeIn {

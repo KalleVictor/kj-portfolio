@@ -42,6 +42,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
+        <div className="footer-text"><p> - Built with React - </p><p> - Designed by Karl-Johan Victor © 2025 -</p></div>
       </footer>
     </div>
   );

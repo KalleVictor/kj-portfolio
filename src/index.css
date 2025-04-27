@@ -31,7 +31,10 @@ body {
 }
 
 main {
-  padding: 20px;
+  padding-top: 7rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1rem;
   max-width: 1024px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
   opacity: 0;
