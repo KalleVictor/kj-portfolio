@@ -115,7 +115,7 @@ header {
   position: absolute;
   top: 0rem;
   left: 0rem;
-  height: 150px;
+  height: 90px;
   z-index: 1000;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
@@ -130,7 +130,7 @@ header {
 
 @media (max-width: 600px) {
   .portfolio {
-    height: 80px;
+    height: 45px;
     top: 0rem;
     left: 0rem;
   }

@@ -1,14 +1,12 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import './Projects.css';
-
-import { Pagination } from 'swiper/modules';
-import tododonely from '../assets/images/tododonely.png';
-import bloodbowl from '../assets/images/bloodbowl.png'
-import munamii from '../assets/images/munamii.png'
 import { motion } from 'framer-motion';
+import './Projects.css';
+import './Testimonials.css';
+
+import tododonely from '../assets/images/tododonely.png';
+import bloodbowl from '../assets/images/bloodbowl.png';
+import munamii from '../assets/images/munamii.png';
+import Worksamples from '../assets/header/Worksamples.png';
 
 const projectItems = [
   {
@@ -32,21 +30,6 @@ const projectItems = [
     link: 'https://github.com/KalleVictor/ToDoDonelyApp',
     linkType: 'github',
   },
-
-  {
-    image: bloodbowl,
-    title: 'Blood Bowl - Legendary Edition',
-    description: 'Game Designer on Blood Bowl: Legendary Edition, adapting the iconic tabletop game for PC and consoles. Designed core gameplay systems, the AI behaviour and single-player campaign, and new online features. The release was praised by the community for its faithful design.',
-    link: 'https://store.steampowered.com/app/58520/Blood_Bowl__Legendary_Edition/',
-    linkType: 'steam',
-  },
-  {
-    image: munamii,
-    title: 'Munamii Cakery',
-    description: 'A sleek website for Munamii Cakery, showcasing their brand and products with an intuitive, mobile-first design.',
-    link: 'https://kallevictor.github.io/Munamii-React/',
-    linkType: 'website',
-  },
   {
     image: tododonely,
     title: 'ToDoDonely App',
@@ -54,45 +37,15 @@ const projectItems = [
     link: 'https://github.com/KalleVictor/ToDoDonelyApp',
     linkType: 'github',
   },
-
 ];
 
 export default function Projects() {
   return (
-    <div>
-      <h1>Worksamples</h1>
-      {/* Mobile Swiper */}
-      <div className="projects-swiper">
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={16}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-        >
-          {projectItems.map((item, index) => (
-            <SwiperSlide key={index}>
-              <motion.a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-card"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-              >
-                <img src={item.image} alt={item.title} className="project-image" />
-                <div className="project-info">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              </motion.a>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="swipe-hint">← swipe →</div>
+    <div className="projects-container">
+      <div>
+        <img src={Worksamples} alt="worksamples" className= "TitleImage"/>
       </div>
 
-      {/* Desktop Grid */}
       <div className="projects-grid">
         {projectItems.map((item, index) => (
           <motion.a
@@ -101,10 +54,10 @@ export default function Projects() {
             target="_blank"
             rel="noopener noreferrer"
             className="project-card"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.15 }}
+            transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 120 }}
           >
             <img src={item.image} alt={item.title} className="project-image" />
             <div className="project-info">

@@ -6,6 +6,28 @@
   padding: 1rem;
   text-align: justify;
 }
+.TitleImage {
+  height: 100px;
+  width: auto;
+
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .TitleImage {
+    height: 80px;
+    width: auto;
+  }
+}
+
+.banner2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .container p {
   line-height: 1.6; /* Improves readability */
   overflow: hidden; /* Ensures text wraps cleanly around the image */
