@@ -31,7 +31,7 @@
   .profile-card:hover {
     background-color: lightblue;
     transition: background-color 1s, border 1s, transform 2s;
-    transform: scale(1.5);
+    transform: scale(1.2);
     border: solid 1px lightblue;
   }
   .profile-picture {

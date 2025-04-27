@@ -45,7 +45,9 @@ export default function Header() {
 
   return (
     <header className={`header ${isHeaderVisible ? 'visible' : 'hidden'}`}>
-      <img src={PortfolioHeader} alt="portfolio" className="titleportfolio" />
+         <a href="https://kallevictor.github.io/kj-portfolio/" rel="noopener">
+          <img src={PortfolioHeader} alt="portfolio" className="titleportfolio" />
+        </a>
 
       <button className="hamburger" onClick={toggleMenu}>
         ☰
