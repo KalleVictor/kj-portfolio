@@ -12,11 +12,7 @@ It is designed to be **responsive**, **fast**, and **easy to maintain**.
 
 ## 🛠 Built With
 
-- [Next.js](https://nextjs.org/) – React framework for production
-- [TypeScript](https://www.typescriptlang.org/) – Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
-- [Framer Motion](https://www.framer.com/motion/) – Animations and transitions
-- [React Icons](https://react-icons.github.io/react-icons/) – Icon library
+- React
 
 ## 🚀 Getting Started
 
