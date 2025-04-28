@@ -3,9 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 1rem;
-  padding-bottom: 4rem;
+  gap: 10px;
+  padding-bottom: 2rem;
   position: relative;
 }
 .HomeProfilePic {
@@ -19,7 +18,8 @@
 
 .card {
   width: 240px;
-  min-height: 250px;
+  max-width: 280px;
+  min-height: 320px;
   border-radius: 16px;
   padding: 1rem;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -40,12 +40,21 @@
   box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
+
+
 .card:hover {
   background-color: lightblue;
 }
 
 .card .Pin {
   display: none;
+}
+
+.CardTitleHome {
+  color: #333;
+  margin-top: 1rem;
+  justify-content: center;
+  font-family: Freestyle Script;
 }
 
 .card.active .Pin {
@@ -60,6 +69,7 @@
 
 .CardBody p {
   font-size: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* Slight wiggle on hover (even when not active) */
@@ -84,7 +94,7 @@
   width: 240px;
   height: 340px;
   perspective: 1200px;
-  margin: 1rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
@@ -97,7 +107,7 @@
 
 .card-face {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   backface-visibility: hidden; /* ← Important! */
   border-radius: 16px;
@@ -108,6 +118,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: -1rem;
 }
 
 .AboutProfilePic {

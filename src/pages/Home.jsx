@@ -87,11 +87,11 @@ export default function Home() {
               transform: isActive ? 'scale(1)' : 'scale(0.9)',
               opacity: isActive ? 1 : 0.4,
             }}
-            whileHover={{ y: isActive ? -10 : -5, rotate: isActive ? 0 : 2, opacity: isActive ? 1 : 0.8 }}
-            transition={{ type: 'spring', stiffness: 300 }}
+            whileHover={{ y: isActive ? -15 : -5, rotate: isActive ? -4 : 10, opacity: isActive ? 1 : 0.8 }}
+            transition={{ type: 'spring', stiffness: 600 }}
             onClick={() => handleNavigate(1)}
           >
-            <div className="CardTitle">
+            <div className="CardTitleHome">
               <h1>{card.title}</h1>
             </div>
             <div className="CardBody">

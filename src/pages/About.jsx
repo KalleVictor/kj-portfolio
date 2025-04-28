@@ -115,7 +115,7 @@ export default function About() {
             return updated;
           });
         }, 800); // after shake
-      }, 4000);
+      }, 7000);
       timers.push(timer);
     }
 
