@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Home.css';
-import profilbild from '../assets/images/profilbild6.jpg';
+import heroimage from '../assets/images/heroimage.png';
 import Welcome from '../assets/header/Welcome.png';
 import Pin from '../assets/images/pin.png';
 
@@ -15,7 +15,7 @@ export default function Home() {
         <>
           <p><img src={Pin} alt="Pin" className= "Pin" />
           I am <strong>Karl-Johan Victor</strong> <em>· Writer · Game Designer · Developer · Creative Technologist ·</em>
-        <img src={profilbild} alt="KJ" className="HomeProfilePic" />
+        <img src={heroimage} alt="KJ" className="heroImage" />
           </p>
         </>
       ),

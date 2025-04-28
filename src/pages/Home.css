@@ -7,13 +7,12 @@
   padding-bottom: 2rem;
   position: relative;
 }
-.HomeProfilePic {
-  display: inline-block;
-  height: 150px;
-  border-radius: 50%;
-  margin: 20px;
-  border: solid 5px white;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.9); /* White circular shadow */
+.heroImage {
+  display: block;
+  height: 300px;
+  border-radius: 12px;
+  margin: 40px auto;
+
 }
 
 .card {
