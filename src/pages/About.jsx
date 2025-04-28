@@ -23,7 +23,7 @@ export default function About() {
       image: Logic,
       title: 'Logical Thinker',
       description: '<strong>Logic ability:</strong> Scored above average (93rd–98th percentile), reflecting strong problem-solving skills and the ability to quickly learn new concepts.',
-      link: 'https://kallevictor.github.io/CV/pdf/Alva%20Labs%20Personality%20Test%20Report%20-%20Karl-Johan%20Victor-2.pdf',
+      link: 'https://kallevictor.github.io/CV/pdf/Alva%20Labs%20Logic%20Test%20Report%20-%20Karl-Johan%20Victor-2.pdf',
       frontBg: 'rgba(213, 213, 214, 0.9)',
       backBg: '#ffffff',
     },
