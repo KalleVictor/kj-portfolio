@@ -7,7 +7,7 @@ import tododonely from '../assets/images/tododonely.png';
 import bloodbowl from '../assets/images/bloodbowl.png';
 import munamii from '../assets/images/munamii.png';
 import Worksamples from '../assets/header/Worksamples.png';
-import portfolioproject from '../assets/images/portfolioproject.png'
+import portfoliopreview from '../assets/images/PortfolioPreview.png'
 import curriculumvitae from '../assets/images/CurriculumVitae.png';
 
 const projectItems = [
@@ -19,7 +19,7 @@ const projectItems = [
     linkType: 'steam',
   },
   {
-    image: portfolioproject,
+    image: portfoliopreview,
     title: 'Portfolio Project',
     description: 'My Portfolio, crafted with React, highlighting my Fullstack expertise.',
     link: 'https://github.com/KalleVictor/kj-portfolio',
