@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion} from 'framer-motion';
 import './Home.css';
 import heroimage from '../assets/images/heroimage.png';
 import Welcome from '../assets/header/Welcome.png';
