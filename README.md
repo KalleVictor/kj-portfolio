@@ -1,9 +1,3 @@
-Of course!  
-I looked at the GitHub repository you shared: **[KalleVictor/kj-portfolio](https://github.com/KalleVictor/kj-portfolio)** — it’s a **Next.js** project for a **personal portfolio**.
-
-I’ll draft a **professional README** for you. Here’s a strong first version:
-
----
 
 # kj-portfolio
 
