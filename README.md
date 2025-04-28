@@ -87,3 +87,5 @@ This project is licensed under the [MIT License](LICENSE).
 - Special thanks to the open-source community!
 
 ---
+
+View the portfolio over at: https://kallevictor.github.io/kj-portfolio/
