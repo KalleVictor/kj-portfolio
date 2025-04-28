@@ -18,6 +18,7 @@ export default function About() {
   const [shakeAbout, setShakeAbout] = useState({});
   const [shakeExtra, setShakeExtra] = useState({});
 
+
   const aboutCards = [
     {
       image: Logic,
@@ -139,6 +140,8 @@ export default function About() {
         timers.push(timer);
       }
     });
+
+
 
     return () => timers.forEach(timer => clearTimeout(timer));
   }, [activeIndex, extraActive]);

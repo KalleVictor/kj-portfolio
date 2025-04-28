@@ -5,12 +5,16 @@
   align-items: center;
 }
 
+.ProjectTitleImage {
+  height: 130px;
+  width: auto;
+}
+
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
 }
 
 .project-card {

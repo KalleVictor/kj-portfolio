@@ -7,13 +7,14 @@ import Pin from '../assets/images/pin.png';
 
 export default function Home() {
   const [cardIndex, setCardIndex] = useState(0);
+  
 
   const cards = [
     {
       title: 'Hello there!',
       body: (
         <>
-          <p><img src={Pin} alt="Pin" className= "Pin" />
+          <p>
           I am <strong>Karl-Johan Victor</strong> <em>· Writer · Game Designer · Developer · Creative Technologist ·</em>
         <img src={heroimage} alt="KJ" className="heroImage" />
           </p>
@@ -25,7 +26,7 @@ export default function Home() {
       title: 'Interactive Storyteller',
       body: (
         <>
-          <p><img src={Pin} alt="Pin" className= "Pin" />Turning concepts into captivating experiences — from games and code to stories and solutions.</p>
+          <p>Turning concepts into captivating experiences — from games and code to stories and solutions.</p>
         </>
       ),
       background: 'rgba(213, 213, 214, 0.9)',
@@ -34,7 +35,7 @@ export default function Home() {
       title: 'Creative Technologist',
       body: (
         <>
-          <p><img src={Pin} alt="Pin" className= "Pin" />I build interactive systems and immersive narratives that blur the line between play and purpose.</p>
+          <p>I build interactive systems and immersive narratives that blur the line between play and purpose.</p>
           <p>From digital fiction to experimental interfaces, my work is all about engagement.</p>
         </>
       ),
@@ -44,7 +45,7 @@ export default function Home() {
       title: 'Collaborative Spirit',
       body: (
         <>
-          <p><img src={Pin} alt="Pin" className= "Pin" />Looking for a creative mind who codes? I’m open to freelance gigs and collaborations.</p>
+          <p>Looking for a creative mind who codes? I’m open to freelance gigs and collaborations.</p>
           <p>Let’s build something memorable together.</p>
         </>
       ),
@@ -54,7 +55,7 @@ export default function Home() {
       title: 'Programmer',
       body: (
         <>
-          <p><img src={Pin} alt="Pin" className= "Pin" />01001001 00100000 01100011 01100001 01101110 00100000 01100011 01101111 01100100 01100101 00100000 01100001 00100000 01100010 01101001 01110100</p>
+          <p>01001001 00100000 01100011 01100001 01101110 00100000 01100011 01101111 01100100 01100101 00100000 01100001 00100000 01100010 01101001 01110100</p>
         </>
       ),
       background: 'rgba(213, 213, 214, 0.9)',
@@ -62,11 +63,6 @@ export default function Home() {
 
   ];
 
-  const handleNavigate = (dir) => {
-    setCardIndex((prev) =>
-      (prev + dir + cards.length) % cards.length
-    );
-  };
 
   return (
  
@@ -84,18 +80,18 @@ export default function Home() {
             style={{
               backgroundColor: card.background,
               zIndex: isActive ? 2 : 1,
-              transform: isActive ? 'scale(1)' : 'scale(0.9)',
+              transform: isActive ? 'scale(1)' : 'scale(0.8)',
               opacity: isActive ? 1 : 0.4,
             }}
-            whileHover={{ y: isActive ? -15 : -5, rotate: isActive ? -4 : 10, opacity: isActive ? 1 : 0.8 }}
+            whileHover={{ y: isActive ? -15 : -5, rotate: isActive ? -4 : 10, opacity: isActive ? 1 : 0.8}}
             transition={{ type: 'spring', stiffness: 600 }}
-            onClick={() => handleNavigate(1)}
+            onClick={() => setCardIndex(index)}
           >
             <div className="CardTitleHome">
               <h1>{card.title}</h1>
             </div>
             <div className="CardBody">
-              {card.body}
+            <img src={Pin} alt="Pin" className= "Pin" />{card.body}
             </div>
           </motion.div>
         );

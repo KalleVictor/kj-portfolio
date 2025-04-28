@@ -18,36 +18,34 @@
 
 .card {
   width: 240px;
-  max-width: 280px;
-  min-height: 320px;
   border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
   margin-bottom: -2rem;
+  opacity: 2;
 }
 
-.card.active {
-  width: 300px;
-  min-height: 350px;
-  transform: rotate(25deg);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-}
-
-
-
-.card:hover {
-  background-color: lightblue;
+.card p {
+  margin-top: -1rem;
 }
 
 .card .Pin {
   display: none;
+}
+.card.active .Pin {
+  display: block;
+  height: 60px;
+  width: auto;
+  position: absolute;
+  right: 6rem;
+  top: 0rem;
 }
 
 .CardTitleHome {
@@ -57,25 +55,16 @@
   font-family: Freestyle Script;
 }
 
-.card.active .Pin {
-  display: block;
-  height: 60px;
-  width: auto;
-  position: absolute;
-  right: 6rem;
-  top: 0rem;
 
-}
 
 .CardBody p {
   font-size: 1rem;
   padding-bottom: 1rem;
 }
 
-/* Slight wiggle on hover (even when not active) */
-.card:hover {
-  transform: translateY(-5px) rotate(1deg);
-}
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

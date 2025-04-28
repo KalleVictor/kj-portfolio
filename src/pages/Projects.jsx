@@ -52,7 +52,7 @@ export default function Projects() {
   return (
     <div className="projects-container">
       <div>
-        <img src={Worksamples} alt="worksamples" className= "TitleImage"/>
+        <img src={Worksamples} alt="worksamples" className= "ProjectTitleImage"/>
       </div>
 
       <div className="projects-grid">
