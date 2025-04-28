@@ -24,7 +24,7 @@ export default function Contact() {
           <img src={profilbild} alt="KJ" className="profile-picture" />
           <h1>Karl-Johan Victor</h1>
           <p className="title">Fullstack Developer, Game Designer</p>
-          <p>Lunds University</p>
+          <p>Lund University</p>
           <div className="social-icons">
             <a href="https://github.com/KalleVictor/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} size="lg" />
