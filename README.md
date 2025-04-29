@@ -85,6 +85,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 - Inspired by modern minimal portfolio designs
 - Special thanks to the open-source community!
+- Special thanks to CaptBligh1 over at devianart for the arrow image. 
+https://www.deviantart.com/captbligh1/art/Arrow-stuck-744104284
 
 ---
 

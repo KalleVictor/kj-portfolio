@@ -5,6 +5,7 @@ import heroimage from '../assets/images/heroimage.png';
 import Welcome from '../assets/header/Welcome.png';
 import Pin from '../assets/images/pin.png';
 
+
 export default function Home() {
   const [cardIndex, setCardIndex] = useState(0);
   
@@ -91,7 +92,7 @@ export default function Home() {
               <h1>{card.title}</h1>
             </div>
             <div className="CardBody">
-            <img src={Pin} alt="Pin" className= "Pin" />{card.body}
+            <img src={Pin} alt="pin" className= "Pin" />{card.body}
             </div>
           </motion.div>
         );

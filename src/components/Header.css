@@ -126,6 +126,7 @@
   }
   .headerbtn.active {
     text-decoration: line-through;
+    color: darkgray;
   }
   .header h1{
     text-align: start;
@@ -174,6 +175,7 @@
 
 .burgerbtn.active {
   text-decoration: line-through;
+  color: darkgray;
 }
 
 
