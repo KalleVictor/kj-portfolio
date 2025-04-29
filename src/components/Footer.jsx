@@ -1,27 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import './Footer.css';
-import github from '../assets/images/github.png';
-import linkedin from '../assets/images/linkedin.png';
-import cv from '../assets/images/cv.png';
-// Add other icons as needed
-
-
 
 const socialLinks = [
   {
     href: 'https://github.com/KalleVictor',
     alt: 'GitHub',
-    image: github,
+    icon: faGithub,
   },
   {
     href: 'https://www.linkedin.com/in/karl-johan-victor-90197659/',
     alt: 'LinkedIn',
-    image: linkedin,
+    icon: faLinkedin,
   },
   {
     href: 'https://kallevictor.github.io/CV/',
     alt: 'CV',
-    image: cv,
+    icon: faFileAlt,
   },
 ];
 
@@ -37,12 +34,15 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="icon-btn"
+              aria-label={link.alt}
             >
-              <img src={link.image} alt={link.alt} />
+              <FontAwesomeIcon icon={link.icon} size="1x" />
             </a>
           ))}
         </div>
-        <div className="footer-text"><p> - Built with React - </p><p> - Designed by Karl-Johan Victor © 2025 -</p></div>
+        <div className="footer-text">
+          <p>Designed by Karl-Johan Victor © 2025</p>
+        </div>
       </footer>
     </div>
   );
