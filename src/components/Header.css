@@ -17,7 +17,7 @@
   .nav-desktop {
     position: absolute;
     bottom: 0rem;
-    right: 1rem;
+    right: 3rem;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
   }
