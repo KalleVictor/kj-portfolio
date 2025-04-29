@@ -1,7 +1,7 @@
 
 # kj-portfolio
 
-> Personal portfolio website built with **Next.js**, **Tailwind CSS**, and **TypeScript**.
+> Personal portfolio website built with React.
 
 ![Screenshot of Portfolio](your-screenshot-url-here) <!-- optional: you can add a screenshot if you want -->
 
