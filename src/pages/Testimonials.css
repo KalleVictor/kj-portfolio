@@ -44,9 +44,11 @@
   width: 100%;
   max-width: 250px;
   flex: 1 1 1 250px;
+  z-index: 2;
+  opacity: 1;
 }
 .testimonial-card:hover {
-  transform: translateY(-5px) rotate(1deg) scale(1.05);
+  transform: translateY(-5px) rotate(1deg) scale(1.1);
   background-color: rgba(213, 213, 214, 0.9);
 }
 
