@@ -251,8 +251,8 @@ export default function About() {
                       className="card-face card-front"
                       style={{ backgroundColor: card.frontBg }}
                     >
-                      <img src={card.image} alt={card.title} className="AboutProfilePicFront2 white-svg-filter" />
-                      <div className="CardTitle">
+                      <img src={card.image} alt={card.title} className="AboutProfilePicFront white-svg-filter" />
+                      <div className="CardTitleAbout">
                         <h1>{card.title}</h1>
                       </div>
                     </div>

@@ -10,14 +10,6 @@
     filter: none;
   }
 
-  .AboutProfilePicFront2 {
-    position: relative;
-    top: 6rem;
-    height: 100px;
-    align-items: auto;
-    filter: none;
-  }
-
   .white-svg-filter {
     filter: brightness(0) invert(1);
   }
