@@ -55,10 +55,54 @@ export default function Header() {
 
       <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><Link to="/home" onClick={toggleMenu}>Home</Link></li>
-          <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
-          <li><Link to="/projects" onClick={toggleMenu}>Projects</Link></li>
-          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+          <li><NavLink 
+          to="/home"   
+          onClick={() => {
+            toggleMenu();
+            window.scrollTo(0, 0);
+          }}
+          className={({ isActive }) => (isActive ? 'burgerbtn active' : 'burgerbtn')}
+        >
+
+            Home
+            
+            </NavLink></li>
+          <li><NavLink 
+          to="/about" 
+          onClick={() => {
+            toggleMenu();
+            window.scrollTo(0, 0);
+          }}
+          className={({ isActive }) => (isActive ? 'burgerbtn active' : 'burgerbtn')}
+            >
+
+            About
+
+            </NavLink></li>
+          <li><NavLink 
+          to="/projects"
+          onClick={() => {
+            toggleMenu();
+            window.scrollTo(0, 0);
+          }}
+          className={({ isActive }) => (isActive ? 'burgerbtn active' : 'burgerbtn')}
+            >
+
+            Projects
+
+            </NavLink></li>
+          <li><NavLink 
+          to="/contact"
+          onClick={() => {
+            toggleMenu();
+            window.scrollTo(0, 0);
+          }}
+          className={({ isActive }) => (isActive ? 'burgerbtn active' : 'burgerbtn')}
+            >
+
+            Contact
+
+            </NavLink></li>
         </ul>
       </nav>
 
@@ -67,6 +111,9 @@ export default function Header() {
           <li>
             <NavLink
               to="/home"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               className={({ isActive }) => (isActive ? 'headerbtn active' : 'headerbtn')}
             >
               Home
@@ -75,6 +122,9 @@ export default function Header() {
           <li>
             <NavLink
               to="/about"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               className={({ isActive }) => (isActive ? 'headerbtn active' : 'headerbtn')}
             >
               About
@@ -83,6 +133,9 @@ export default function Header() {
           <li>
             <NavLink
               to="/projects"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               className={({ isActive }) => (isActive ? 'headerbtn active' : 'headerbtn')}
             >
               Projects
@@ -91,6 +144,9 @@ export default function Header() {
           <li>
             <NavLink
               to="/contact"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               className={({ isActive }) => (isActive ? 'headerbtn active' : 'headerbtn')}
             >
               Contact

@@ -136,6 +136,9 @@
 
   padding: 10px 20px;
 }
+.nav.menubutton:active {
+  text-decoration: line-through;
+}
 
 
 @media (max-width: 868px) {
@@ -163,4 +166,8 @@
     top: 0rem;
     left: 0rem;
   }
+}
+
+.burgerbtn.active {
+  text-decoration: line-through;
 }

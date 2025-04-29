@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
 import profilbild from '../assets/images/profilbild6.jpg';
 import ContactMe from '../assets/header/Contact.png';
@@ -16,6 +16,34 @@ export default function Contact() {
   const handleCloseClick = () => {
     setShowForm(false);
   };
+
+  const contactLinks = [
+    {
+      href: 'https://github.com/KalleVictor/',
+      alt: 'GitHub',
+      icon: faGithub,
+    },
+    {
+      href: 'https://www.linkedin.com/in/karl-johan-victor-90197659/',
+      alt: 'LinkedIn',
+      icon: faLinkedin,
+    },
+    {
+      href: 'https://discordapp.com/users/Enarion',
+      alt: 'Discord',
+      icon: faDiscord,
+    },
+    {
+      href: 'tel:+46703152644',
+      alt: 'Phone',
+      icon: faPhone,
+    },
+    {
+      href: 'mailto:karljohan.victor@hotmail.com',
+      alt: 'Email',
+      icon: faEnvelope,
+    },
+  ];
 
   return (
     <div className="contact-wrapper">
@@ -36,23 +64,28 @@ export default function Contact() {
               <h1>Karl-Johan Victor</h1>
               <p className="title">Fullstack Developer, Game Designer</p>
               <p>Lund University</p>
+
               <div className="social-icons">
-                <a href="https://github.com/KalleVictor/" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faGithub} size="lg" className="icon" />
+              
+              {contactLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon"
+                  aria-label={link.alt}
+                >
+                  <FontAwesomeIcon icon={link.icon} size="1x" className="icon" />
                 </a>
-                <a href="https://www.linkedin.com/in/karl-johan-victor-90197659/" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faLinkedin} size="lg" className="icon" />
-                </a>
-                <a href="tel:+46703152644" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faPhone} size="lg" className="icon" />
-                </a>
-                <a href="mailto:karljohan.victor@hotmail.com" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faEnvelope} size="lg" className="icon"/>
-                </a>
+              ))}
+              
               </div>
+
               <button className="contact-button" onClick={handleButtonClick}>
                 Contact
               </button>
+
             </>
           ) : (
             <div className="contact-form">

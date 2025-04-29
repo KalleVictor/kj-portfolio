@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faDiscord} from '@fortawesome/free-brands-svg-icons';
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import './Footer.css';
 
@@ -16,6 +16,11 @@ const socialLinks = [
     icon: faLinkedin,
   },
   {
+    href: 'https://discordapp.com/users/Enarion',
+    alt: 'Discord',
+    icon: faDiscord,
+  },
+  {
     href: 'https://kallevictor.github.io/CV/',
     alt: 'CV',
     icon: faFileAlt,
@@ -26,6 +31,9 @@ export default function Footer() {
   return (
     <div>
       <footer>
+        <div className="footer-text">
+          <p>Designed by Karl-Johan Victor © 2025</p>
+        </div>
         <div className="social-media">
           {socialLinks.map((link, index) => (
             <a
@@ -39,9 +47,6 @@ export default function Footer() {
               <FontAwesomeIcon icon={link.icon} size="1x" />
             </a>
           ))}
-        </div>
-        <div className="footer-text">
-          <p>Designed by Karl-Johan Victor © 2025</p>
         </div>
       </footer>
     </div>
