@@ -18,6 +18,20 @@ const testimonials = [
     quote: '"His knowledge and experience outside the scope of the video game industry is super easily valuable in a multicultural and inclusive team."',
     link: 'https://www.linkedin.com/in/saidasiam/',
   },
+  {
+    image: 'https://media.licdn.com/dms/image/v2/D4E35AQEm3mOWtAIrnA/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1729176865014?e=1746313200&v=beta&t=EhzJ6jZTg3Tp6WV13A-glaRPq4hDVVg4LA2Xs0phEKQ',
+    name: 'Saïda Mirzoeva',
+    title: 'Game Producer',
+    quote: '"His knowledge and experience outside the scope of the video game industry is super easily valuable in a multicultural and inclusive team."',
+    link: 'https://www.linkedin.com/in/saidasiam/',
+  },
+  {
+    image: 'https://media.licdn.com/dms/image/v2/D4E35AQEm3mOWtAIrnA/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1729176865014?e=1746313200&v=beta&t=EhzJ6jZTg3Tp6WV13A-glaRPq4hDVVg4LA2Xs0phEKQ',
+    name: 'Saïda Mirzoeva',
+    title: 'Game Producer',
+    quote: '"His knowledge and experience outside the scope of the video game industry is super easily valuable in a multicultural and inclusive team."',
+    link: 'https://www.linkedin.com/in/saidasiam/',
+  },
 ];
 
 export default function Testimonials() {

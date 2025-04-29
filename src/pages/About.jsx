@@ -162,7 +162,10 @@ export default function About() {
               className={`card-container2 ${isShaking ? 'shake' : ''}`}
               onClick={() => handleCardClick(index)}
               onMouseEnter={() => handleCardHover(index, true)}
-              onMouseLeave={() => handleCardHover(index, false)}
+              onMouseLeave={() => handleCardHover(index, false)}  
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 120 }}           
             >
               <motion.div
                 className="card-flip-inner"

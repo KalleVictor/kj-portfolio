@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.3s ease;
   z-index: 1000;
 }
 
@@ -25,10 +24,40 @@
 
 .header.visible {
   transform: translateY(0);
+  animation: fadeInHeader 1s ease-in-out forwards;
+}
+
+@keyframes fadeInHeader {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 .header.hidden {
   transform: translateY(-100%);
+  animation: fadeOutHeader 1s ease-in-out forwards;
+
+}
+
+@keyframes fadeOutHeader {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1;
+
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+    scale: 0.8;
+  }
 }
 
 @media (max-width: 800px) {
