@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Home.css';
 import '../App.css'
+import './About.css';
 
 import Logic from '../assets/images/logic.svg';
 import Personality from '../assets/images/personality.svg';
@@ -178,8 +179,8 @@ export default function About() {
                     className="card-face card-front"
                     style={{ backgroundColor: card.frontBg }}
                   >
-                    <img src={card.image} alt={card.title} className="AboutProfilePic" />
-                    <div className="CardTitle">
+                    <img src={card.image} alt={card.title} className={`AboutProfilePicFront ${index > 1 ? 'white-svg-filter' : ''}`} />
+                    <div className="CardTitleAbout">
                       <h1>{card.title}</h1>
                     </div>
                   </div>
@@ -188,7 +189,7 @@ export default function About() {
                     className="card-face card-back"
                     style={{ backgroundColor: card.backBg }}
                   >
-                    <img src={card.image} alt={card.title} className="AboutProfilePic" />
+                    <img src={card.image} alt={card.title} className="AboutProfilePicFront" />
                     <div className="CardBody">
                       <p dangerouslySetInnerHTML={{ __html: card.description }}></p>
                       {card.link && card.title !== 'Did you know?' && (
@@ -250,7 +251,7 @@ export default function About() {
                       className="card-face card-front"
                       style={{ backgroundColor: card.frontBg }}
                     >
-                      <img src={card.image} alt={card.title} className="AboutProfilePic" />
+                      <img src={card.image} alt={card.title} className="AboutProfilePicFront2 white-svg-filter" />
                       <div className="CardTitle">
                         <h1>{card.title}</h1>
                       </div>

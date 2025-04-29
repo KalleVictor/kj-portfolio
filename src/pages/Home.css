@@ -13,7 +13,6 @@
   border-radius: 12px;
   margin: 0px auto;
   margin-top: 1rem;
-
 }
 
 .card {
@@ -56,6 +55,12 @@
   justify-content: center;
   font-family: Freestyle Script;
 }
+.CardTitleAbout {
+  color: White;
+  margin-top: 1rem;
+  justify-content: center;
+  font-family: Freestyle Script;
+}
 
 
 
@@ -93,6 +98,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  background-image: none;
   transform-style: preserve-3d;
 }
 
@@ -110,6 +116,8 @@
   justify-content: center;
   overflow: hidden;
   margin-top: -1rem;
+  opacity: 1;
+  
 }
 
 .AboutProfilePic {
@@ -119,11 +127,17 @@
 
 .card-front {
   z-index: 2;
+  background-image: url("../assets/images/heroimage.png");
+  filter: sepia(100%);
+  background-size: contain;
+
 }
 
 
 .card-back {
   transform: rotateY(180deg);
+  background-image: none;
+  opacity: 1;
   z-index: 1;
 }
 

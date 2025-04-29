@@ -1,0 +1,23 @@
+.AboutProfilePic {
+    height: 80px;
+    padding-top: 50px;
+  }
+
+  .AboutProfilePicFront {
+    height: 80px;
+    padding-top: 50px;
+    fill: white;
+    filter: none;
+  }
+
+  .AboutProfilePicFront2 {
+    position: relative;
+    top: 6rem;
+    height: 100px;
+    align-items: auto;
+    filter: none;
+  }
+
+  .white-svg-filter {
+    filter: brightness(0) invert(1);
+  }
