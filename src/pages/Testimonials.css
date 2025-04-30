@@ -35,18 +35,17 @@
 
 /* The testimonial card */
 .testimonial-card {
+  width: 240px;
   background: #fff;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 1.0s ease;
-  width: 100%;
-  max-width: 250px;
   flex: 1 1 1 1 250px;
   z-index: 2;
   opacity: 1;
-  height: 400px;
+  min-height: 400px;
 }
 .testimonial-card:hover {
   transform: translateY(-5px) rotate(1deg) scale(1.1);
