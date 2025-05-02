@@ -40,12 +40,6 @@ footer {
     text-decoration: none;
     display: block;
   }
-  .footer-text a:hover {
-    color: mediumblue; /* Change text color on hover */
-    text-shadow: lightblue 0px 0px 5px; /* Optional: add a shadow effect on hover */
-    text-decoration: underline; /* Optional: underline on hover */
-    transition: text-shadow 0.3s, color 0.3s; /* Smooth transition for the hover effect */
-  }
 
   .icon-btn {
     margin: 0 10px;
@@ -55,7 +49,7 @@ footer {
   }
   
   .icon-btn:hover {
-    color: #0073b1; /* Change to your preferred hover color */
+    color: lightblue; 
     transform: scale(1.2);
     animation: bounce 0.6s;
   }
