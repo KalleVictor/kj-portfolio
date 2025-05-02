@@ -207,7 +207,7 @@ export default function About() {
     return (
       <motion.div
         key={index}
-        className={`about-card-container ${isShaking ? 'shake' : ''}`}
+        className={`about-card-container ${isActive ? 'is-flipped' : ''} ${isShaking ? 'shake' : ''}`}
         onClick={handleClick}
         onMouseEnter={() => handleHover(true)}
         onMouseLeave={() => handleHover(false)}

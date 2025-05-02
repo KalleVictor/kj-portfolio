@@ -34,6 +34,11 @@
   transform-style: preserve-3d;
 }
 
+.about-card-deck .about-card-container.is-flipped {
+  z-index: 10;
+  position: relative;
+}
+
 .about-card-deck .card-face {
   position: absolute;
   width: 100%;
@@ -137,6 +142,7 @@
 @media screen and (max-width: 768px) {
   .about-card-deck {
     max-width: 100%;
+    z-index: -2;
   }
 
   .about-card-deck .about-card-container,
@@ -144,6 +150,7 @@
     width: 160px;
     height: 300px;
   }
+
   .about-card-deck p {
     font-size: small;
     padding-left: 1rem;
@@ -161,7 +168,7 @@
   }
 
   .card-flip-inner .visit.btn {
-    padding: 0px;
+
   }
 }
 
@@ -171,7 +178,8 @@
   .about-card-deck .card-flip-inner {
     width: 140px;
     height: 260px;
-  }
+    z-index: 4;
+}
 
   .about-card-deck .CardTitleAbout {
     font-size: small;
