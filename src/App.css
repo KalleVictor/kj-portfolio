@@ -1,17 +1,8 @@
-.container {
-  max-width: 1024px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  text-align: justify;
-}
+
 .TitleImage {
   height: 100px;
   width: auto;
-
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {

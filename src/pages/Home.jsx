@@ -4,10 +4,11 @@ import './Home.css';
 import heroimage from '../assets/images/heroimage.png';
 import Welcome from '../assets/header/Welcome.png';
 import Pin from '../assets/images/pin.png';
+import arrow from '../assets/files/arrow.mp3'
 
 
 export default function Home() {
-  const [cardIndex, setCardIndex] = useState(0);
+  const [activeCards, setActiveCards] = useState([]);
   
 
   const cards = [
@@ -17,7 +18,7 @@ export default function Home() {
         <>
           <p>
           I am <strong>Karl-Johan Victor</strong> <em>· Writer · Game Designer · Developer · Creative Technologist ·</em>
-        <img src={heroimage} alt="KJ" className="heroImage" />
+        <img src={heroimage} alt="Hero Image" className="heroImage" />
           </p>
         </>
       ),
@@ -64,6 +65,10 @@ export default function Home() {
 
   ];
 
+  const playSound = () => {
+    const audio = new Audio(arrow);
+    audio.play();
+  };
 
   return (
  
@@ -73,7 +78,7 @@ export default function Home() {
         <img src={Welcome} alt="Welcome" className= "TitleImage" />
       </div>
       {cards.map((card, index) => {
-        const isActive = index === cardIndex;
+        const isActive = activeCards.includes(index);
         return (
           <motion.div
             key={index}
@@ -84,9 +89,17 @@ export default function Home() {
               transform: isActive ? 'scale(1)' : 'scale(0.8)',
               opacity: isActive ? 1 : 0.4,
             }}
-            whileHover={{ y: isActive ? -15 : -5, rotate: isActive ? -4 : 10, opacity: isActive ? 1 : 0.8}}
+            whileHover={{ 
+              y: isActive ? -15 : -5, 
+              rotate: isActive ? -4 : 10, 
+              opacity: isActive ? 1 : 0.8}}
             transition={{ type: 'spring', stiffness: 600 }}
-            onClick={() => setCardIndex(index)}        
+            onClick={() => {
+              if (!activeCards.includes(index)) {
+                setActiveCards([...activeCards, index]);
+                playSound();
+              }
+            }}       
           >
             <div className="CardTitleHome">
               <h1>{card.title}</h1>

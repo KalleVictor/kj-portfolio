@@ -12,6 +12,9 @@ import Quill from '../assets/images/quill.svg';
 import Passion from '../assets/images/controller.svg'; 
 import Explorer from '../assets/images/explorer.svg'; 
 
+import flipSound from '../assets/files/flip.mp3';
+import appearSound from '../assets/files/deal.mp3'
+
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [showExtraCards, setShowExtraCards] = useState(false);
@@ -71,19 +74,49 @@ export default function About() {
     },
   ];
 
+  const playFlipSound = () => {
+    const audio = new Audio(flipSound);
+    audio.play();
+  };
+  
   const handleCardClick = (index) => {
+    playFlipSound();
     if (aboutCards[index].title === 'Did you know?') {
       setShowExtraCards(true);
     }
     setActiveIndex(activeIndex === index ? null : index);
   };
-
+  
   const handleExtraCardClick = (index) => {
+    playFlipSound();
     setExtraActive(prev => ({
       ...prev,
       [index]: !prev[index],
     }));
   };
+
+  const playAppearSound = () => {
+    const audio = new Audio(appearSound);
+    audio.play();
+  };
+  
+  useEffect(() => {
+    const appearDelay = 200;
+    const timer = setTimeout(() => {
+      playAppearSound();
+    }, appearDelay);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (showExtraCards) {
+      const appearDelay = 200;
+      const timer = setTimeout(() => {
+        playAppearSound();
+      }, appearDelay);
+      return () => clearTimeout(timer);
+    }
+  }, [showExtraCards]);
 
   const handleCardHover = (index, isHovering) => {
     setShakeAbout(prev => ({
@@ -142,10 +175,10 @@ export default function About() {
       }
     });
 
-
-
     return () => timers.forEach(timer => clearTimeout(timer));
   }, [activeIndex, extraActive]);
+
+  const cardDelays = [0.4, 0.8, 1.2];
 
   return (
     <div className="card-deck-wrapper">
@@ -153,126 +186,77 @@ export default function About() {
         <img src={AboutMe} alt="About" className="TitleImage" />
       </div>
 
-      <div className="card-deck">
-        {aboutCards.map((card, index) => {
-          const isActive = activeIndex === index;
-          const isShaking = shakeAbout[index] || shakeAbout[`hover-${index}`];
-          return (
-            <motion.div
-              key={index}
-              className={`card-container2 ${isShaking ? 'shake' : ''}`}
-              onClick={() => handleCardClick(index)}
-              onMouseEnter={() => handleCardHover(index, true)}
-              onMouseLeave={() => handleCardHover(index, false)}  
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 120 }}           
-            >
-              <motion.div
-                className="card-flip-inner"
-                animate={{ rotateY: isActive ? 180 : 0 }}
-                transition={{ duration: 0.8 }}
-                style={{ transformStyle: 'preserve-3d' }}
-              >
-                {!isActive ? (
-                  <div
-                    className="card-face card-front"
-                    style={{ backgroundColor: card.frontBg }}
-                  >
-                    <img src={card.image} alt={card.title} className={`AboutProfilePicFront ${index > 1 ? 'white-svg-filter' : ''}`} />
-                    <div className="CardTitleAbout">
-                      <h1>{card.title}</h1>
-                    </div>
-                  </div>
-                ) : (
-                  <div
-                    className="card-face card-back"
-                    style={{ backgroundColor: card.backBg }}
-                  >
-                    <img src={card.image} alt={card.title} className="AboutProfilePicFront" />
-                    <div className="CardBody">
-                      <p dangerouslySetInnerHTML={{ __html: card.description }}></p>
-                      {card.link && card.title !== 'Did you know?' && (
-                        <a
-                          href={card.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="card-link"
-                        >
-                          <button className="visit-btn">Find out more...</button>
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-            </motion.div>
-          );
-        })}
-      </div>
+      <div className="about-card-deck">
+  {[...aboutCards, ...(showExtraCards ? extraCards : [])].map((card, index) => {
+    const totalCards = aboutCards.length;
+    const isExtra = index >= totalCards;
+    const cardIndex = isExtra ? index - totalCards : index;
+    const isActive = isExtra ? extraActive[cardIndex] : activeIndex === index;
+    const isShaking = isExtra
+      ? shakeExtra[`shake-${cardIndex}`] || shakeExtra[`hover-${cardIndex}`]
+      : shakeAbout[index] || shakeAbout[`hover-${index}`];
 
-      {showExtraCards && (
+    const handleClick = () =>
+      isExtra ? handleExtraCardClick(cardIndex) : handleCardClick(index);
+
+    const handleHover = (hovering) =>
+      isExtra
+        ? handleExtraCardHover(cardIndex, hovering)
+        : handleCardHover(index, hovering);
+
+    return (
+      <motion.div
+        key={index}
+        className={`about-card-container ${isShaking ? 'shake' : ''}`}
+        onClick={handleClick}
+        onMouseEnter={() => handleHover(true)}
+        onMouseLeave={() => handleHover(false)}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.8, delay: cardDelays[index % 3], type: "spring", stiffness: 120 }}
+      >
         <motion.div
-          className="card-deck"
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.2,
-              },
-            },
-          }}
+          className="card-flip-inner"
+          animate={{ rotateY: isActive ? 180 : 0 }}
+          transition={{ duration: 0.8 }}
+          style={{ transformStyle: 'preserve-3d' }}
         >
-          {extraCards.map((card, index) => {
-            const isFlipped = extraActive[index];
-            const isShaking = shakeExtra[`shake-${index}`] || shakeExtra[`hover-${index}`];
-            return (
-              <motion.div
-                key={`extra-${index}`}
-                className={`card-container2 ${isShaking ? 'shake' : ''}`}
-                onClick={() => handleExtraCardClick(index)}
-                onMouseEnter={() => handleExtraCardHover(index, true)}
-                onMouseLeave={() => handleExtraCardHover(index, false)}
-                variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-                }}
-              >
-                <motion.div
-                  className="card-flip-inner"
-                  animate={{ rotateY: isFlipped ? 180 : 0 }}
-                  transition={{ duration: 0.8 }}
-                  style={{ transformStyle: 'preserve-3d' }}
-                >
-                  {!isFlipped ? (
-                    <div
-                      className="card-face card-front"
-                      style={{ backgroundColor: card.frontBg }}
-                    >
-                      <img src={card.image} alt={card.title} className="AboutProfilePicFront white-svg-filter" />
-                      <div className="CardTitleAbout">
-                        <h1>{card.title}</h1>
-                      </div>
-                    </div>
-                  ) : (
-                    <div
-                      className="card-face card-back"
-                      style={{ backgroundColor: card.backBg }}
-                    >
-                      <img src={card.image} alt={card.title} className="AboutProfilePic" />
-                      <div className="CardBody">
-                        <p dangerouslySetInnerHTML={{ __html: card.description }}></p>
-                      </div>
-                    </div>
-                  )}
-                </motion.div>
-              </motion.div>
-            );
-          })}
+          {!isActive ? (
+            <div
+              className="card-face card-front"
+              style={{ backgroundColor: card.frontBg }}
+            >
+              <img src={card.image} alt={card.title} className={`AboutProfilePicFront ${index > 1 ? 'white-svg-filter' : ''}`} />
+              <div className="CardTitleAbout">
+                <h1>{card.title}</h1>
+              </div>
+            </div>
+          ) : (
+            <div
+              className="card-face card-back"
+              style={{ backgroundColor: card.backBg }}
+            >
+              <img src={card.image} alt={card.title} className="AboutProfilePic" />
+              <div className="CardBody">
+                <p dangerouslySetInnerHTML={{ __html: card.description }}></p>
+                {card.link && card.title !== 'Did you know?' && (
+                  <a
+                    href={card.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
+                    <button className="visit-btn">Find out more...</button>
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
         </motion.div>
-      )}
+      </motion.div>
+    );
+  })}
+</div>
     </div>
   );
 }

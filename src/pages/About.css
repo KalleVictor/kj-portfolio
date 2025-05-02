@@ -1,15 +1,187 @@
-.AboutProfilePic {
+.card-deck-wrapper {
+  margin: 0 auto;
+}
+
+.about-card-deck {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.about-card-deck .CardTitleAbout {
+  color: White;
+  margin-top: 1rem;
+  justify-content: center;
+  font-family: Freestyle Script;
+  font-size: large;
+}
+
+.about-card-deck .about-card-container {
+  width: 240px;
+  height: 380px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.about-card-deck .card-flip-inner {
+  width: 240px;
+  height: 380px;
+  position: relative;
+  background-image: none;
+  transform-style: preserve-3d;
+}
+
+.about-card-deck .card-face {
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  backface-visibility: hidden; /* ← Important! */
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;
+  
+}
+
+.about-card-deck .card-front {
+  position: relative;
+  z-index: 2;
+  background: none; /* Remove the background from the main element */
+  overflow: hidden; /* Ensure pseudo-element stays contained */
+}
+
+.about-card-deck .card-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/heroimage.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: sepia(100%);
+  z-index: 0;
+  pointer-events: none; /* allows clicks to pass through */
+}
+
+.about-card-deck .card-front > * {
+  position: relative;
+  z-index: 1; /* Ensure content is above the pseudo-element */
+}
+
+.about-card-deck .card-back {
+  transform: rotateY(180deg);
+  background-image: none;
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.about-card-deck .AboutProfilePic {
     height: 80px;
     padding-top: 50px;
   }
 
-  .AboutProfilePicFront {
+.AboutProfilePicFront {
     height: 80px;
-    padding-top: 50px;
     fill: white;
     filter: none;
   }
 
-  .white-svg-filter {
+.white-svg-filter {
     filter: brightness(0) invert(1);
   }
+
+
+/* Tablet screens */
+@media screen and (max-width: 1024px) {
+  .about-card-deck {
+    max-width: 700px;
+  }
+
+  .about-card-deck .about-card-container,
+  .about-card-deck .card-flip-inner {
+    width: 200px;
+    height: 340px;
+  }
+
+  .about-card-deck .CardTitleAbout {
+    font-size: medium;
+  }
+
+  .AboutProfilePic {
+    height: 50px;
+  }
+  .card-flip-inner .AboutProfilePic,
+  .card-flip-inner .AboutProfilePicFront {
+    height: 40px;
+    margin-top: -1.5rem;
+  }
+  .card-flip-inner .visit.btn {
+    padding: 0;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 768px) {
+  .about-card-deck {
+    max-width: 100%;
+    padding: 0 10px;
+    justify-content: space-around;
+  }
+
+  .about-card-deck .about-card-container,
+  .about-card-deck .card-flip-inner {
+    width: 160px;
+    height: 300px;
+  }
+  .about-card-deck p {
+    font-size: small;
+    margin-bottom: -1rem;
+  }
+
+  .about-card-deck .CardTitleAbout {
+    font-size: small;
+    text-align: center;
+  }
+
+  .AboutProfilePic,
+  .AboutProfilePicFront {
+    height: 40px;
+  }
+
+  .card-flip-inner .visit.btn {
+    padding: 0;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+  .about-card-deck .about-card-container,
+  .about-card-deck .card-flip-inner {
+    width: 140px;
+    height: 260px;
+  }
+
+  .about-card-deck .CardTitleAbout {
+    font-size: small;
+  }
+
+  .about-card-deck p {
+    font-size: small;
+  }
+
+  .AboutProfilePic,
+  .AboutProfilePicFront {
+    display: none;
+  }
+}

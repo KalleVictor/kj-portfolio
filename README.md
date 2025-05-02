@@ -87,7 +87,7 @@ This project is licensed under the [MIT License](LICENSE).
 - Special thanks to the open-source community!
 - Special thanks to CaptBligh1 over at devianart for the arrow image. 
 https://www.deviantart.com/captbligh1/art/Arrow-stuck-744104284
-
+And also for the Arrow Body Impact sound over at pixabay, https://pixabay.com/users/dennish18-26151496/
 ---
 
 View the portfolio over at: https://kallevictor.github.io/kj-portfolio/
