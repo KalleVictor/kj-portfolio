@@ -6,13 +6,14 @@
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  gap: 0.5rem;
   margin: 0 auto;
   max-width: 900px;
 }
 
+
 .about-card-deck .CardTitleAbout {
   color: White;
-  margin-top: 1rem;
   justify-content: center;
   font-family: Freestyle Script;
   font-size: large;
@@ -21,25 +22,24 @@
 .about-card-deck .about-card-container {
   width: 240px;
   height: 380px;
+
   perspective: 1200px;
   cursor: pointer;
 }
 
-.about-card-deck .card-flip-inner {
+.about-card-container .card-flip-inner {
   width: 240px;
   height: 380px;
-  position: relative;
   background-image: none;
   transform-style: preserve-3d;
 }
 
 .about-card-deck .card-face {
   position: absolute;
-  width: 80%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden; /* ← Important! */
   border-radius: 16px;
-  padding: 1rem;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
@@ -80,9 +80,10 @@
 
 .about-card-deck .card-back {
   transform: rotateY(180deg);
+  padding: 0.5rem;
   background-image: none;
   opacity: 1;
-  z-index: 1;
+  z-index: 3;
 }
 
 
@@ -106,6 +107,7 @@
 @media screen and (max-width: 1024px) {
   .about-card-deck {
     max-width: 700px;
+    gap: 0.4rem;
   }
 
   .about-card-deck .about-card-container,
@@ -135,8 +137,6 @@
 @media screen and (max-width: 768px) {
   .about-card-deck {
     max-width: 100%;
-    padding: 0 10px;
-    justify-content: space-around;
   }
 
   .about-card-deck .about-card-container,
@@ -146,7 +146,8 @@
   }
   .about-card-deck p {
     font-size: small;
-    margin-bottom: -1rem;
+    padding-left: 1rem;
+    text-align: left;
   }
 
   .about-card-deck .CardTitleAbout {
@@ -160,7 +161,7 @@
   }
 
   .card-flip-inner .visit.btn {
-    padding: 0;
+    padding: 0px;
   }
 }
 
@@ -176,9 +177,6 @@
     font-size: small;
   }
 
-  .about-card-deck p {
-    font-size: small;
-  }
 
   .AboutProfilePic,
   .AboutProfilePicFront {

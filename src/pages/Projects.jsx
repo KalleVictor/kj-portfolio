@@ -30,7 +30,7 @@ const projectItems = [
     title: 'Curriculum Vitae',
     description: 'My Curriculum Vitae, crafted with HTML, CSS, and JavaScript, highlighting my expertise and design skills.',
     link: 'https://github.com/KalleVictor/cv',
-    linkType: 'website',
+    linkType: 'github',
   },
   {
     image: munamii,
