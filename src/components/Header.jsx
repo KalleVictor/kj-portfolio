@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link, } from 'react-router';
 import { NavLink } from 'react-router'; 
 import './Header.css';
 import PortfolioHeader from '../assets/images/PortfolioHeader.png';
