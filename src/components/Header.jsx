@@ -12,6 +12,18 @@ export default function Header() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+
+  // Close menu on Esc key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
   useEffect(() => {
     let ticking = false;
 
@@ -45,11 +57,12 @@ export default function Header() {
 
   return (
     <header className={`header ${isHeaderVisible ? 'visible' : 'hidden'}`}>
-         <a href="https://kallevictor.github.io/kj-portfolio/" rel="noopener">
-          <img src={PortfolioHeader} alt="portfolio" className="titleportfolio" />
+         <a href="https://kallevictor.github.io/kj-portfolio/" rel="noopener noreferrer">
+          <img src={PortfolioHeader} alt="Karl-Johan Victor portfolio logo" className="titleportfolio" />
         </a>
 
-      <button className="hamburger" onClick={toggleMenu}>
+      <button className="hamburger" onClick={toggleMenu} aria-expanded={isMenuOpen}
+        aria-label="Toggle navigation menu">
         ☰
       </button>
 

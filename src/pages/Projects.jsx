@@ -17,6 +17,7 @@ const projectItems = [
     description: 'Game Designer on Blood Bowl: Legendary Edition, adapting the iconic tabletop game for PC and consoles. Designed core gameplay systems, the AI behaviour and single-player campaign, and new online features. The release was praised by the community for its faithful design.',
     link: 'https://store.steampowered.com/app/58520/Blood_Bowl__Legendary_Edition/',
     linkType: 'steam',
+    alt: 'Screenshot of Blood Bowl - Legendary Edition over at Steam.'
   },
   {
     image: portfoliopreview,
@@ -24,6 +25,7 @@ const projectItems = [
     description: 'My Portfolio, crafted with React, highlighting my Fullstack expertise.',
     link: 'https://github.com/KalleVictor/kj-portfolio',
     linkType: 'github',
+    alt: 'Screenshot of my Portfolio website.'
   },
   {
     image: curriculumvitae,
@@ -31,6 +33,7 @@ const projectItems = [
     description: 'My Curriculum Vitae, crafted with HTML, CSS, and JavaScript, highlighting my expertise and design skills.',
     link: 'https://github.com/KalleVictor/cv',
     linkType: 'github',
+    alt: 'Screenshot of the CV website.'
   },
   {
     image: munamii,
@@ -38,6 +41,7 @@ const projectItems = [
     description: 'A sleek website for Munamii Cakery, showcasing their brand and products with an intuitive, mobile-first design.',
     link: 'https://kallevictor.github.io/Munamii-React/',
     linkType: 'website',
+    alt: 'Tumbnail of Munamii Cakery Website'
   },
   {
     image: tododonely,
@@ -45,6 +49,7 @@ const projectItems = [
     description: 'ToDoDonely is a console-based task manager built with C#, supporting task viewing, adding, editing, and saving.',
     link: 'https://github.com/KalleVictor/ToDoDonelyApp',
     linkType: 'github',
+    alt: 'Thumbnail of the ToDoDonely App.'
   },
 ];
 
@@ -68,7 +73,7 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 120 }}
           >
-            <img src={item.image} alt={item.title} className="project-image" />
+            <img src={item.image} alt={item.alt} className="project-image" />
             <div className="project-info">
               <h3>{item.title}</h3>
               <p>{item.description}</p>

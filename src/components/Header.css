@@ -207,3 +207,32 @@
   }
 }
 
+.hamburger:focus {
+  outline: 2px solid lightblue; 
+  outline-offset: 2px;
+}
+
+/* Mobile menu links */
+.burgerbtn:focus {
+  outline: 2px solid lightblue;
+  outline-offset: 2px;
+}
+
+/* Desktop menu links */
+.headerbtn:focus {
+  outline: 2px solid lightblue;
+  outline-offset: 2px;
+}
+
+/* Logo link */
+.titleportfolio:focus {
+  outline: 2px solid lightblue;
+  outline-offset: 2px;
+}
+
+/* Ensure hidden header is still accessible */
+.header.hidden {
+  transform: translateY(-100%); /* Your hide animation */
+  visibility: visible; /* Keep focusable */
+  position: fixed; /* Ensure it stays in DOM */
+}
