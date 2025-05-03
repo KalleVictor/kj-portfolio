@@ -5,7 +5,7 @@ import './Testimonials.css';
 
 const testimonials = [
   {
-    image: 'https://kallevictor.github.io/CV/images/profilbild6.jpg',
+    image: 'https://media.licdn.com/dms/image/v2/D4E35AQFYL1jm7-evhQ/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1682062726604?e=1746792000&v=beta&t=VqypGnQ88y1_Yal1y8komP2YLVw045gPisKabIIlmi0',
     name: 'Karl-Johan Victor',
     title: 'Game Designer & Storyteller',
     quote: '"Building meaningful connections fuels my creativity, and I cherish the opportunity to share stories of collaboration through testimonials and referrals."',

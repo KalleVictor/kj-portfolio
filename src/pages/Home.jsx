@@ -67,6 +67,7 @@ export default function Home() {
 
   const playSound = () => {
     const audio = new Audio(arrow);
+    audio.volume = 0.2;
     audio.play();
   };
 

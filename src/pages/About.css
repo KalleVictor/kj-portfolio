@@ -22,16 +22,19 @@
 .about-card-deck .about-card-container {
   width: 240px;
   height: 380px;
-
   perspective: 1200px;
   cursor: pointer;
+  border-radius: 16px;
 }
+
 
 .about-card-container .card-flip-inner {
   width: 240px;
   height: 380px;
   background-image: none;
   transform-style: preserve-3d;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 16px;
 }
 
 .about-card-deck .about-card-container.is-flipped {
@@ -60,6 +63,7 @@
   z-index: 2;
   background: none; /* Remove the background from the main element */
   overflow: hidden; /* Ensure pseudo-element stays contained */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .about-card-deck .card-front::before {
@@ -185,5 +189,12 @@
   .AboutProfilePic,
   .AboutProfilePicFront {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav, .card-flip-inner, .home-card {
+    transition: none;
+    transform: none;
   }
 }

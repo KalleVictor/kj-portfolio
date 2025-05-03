@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
-import profilbild from '../assets/images/profilbild6.jpg';
+import profilbild from '../assets/images/profilbild.jpg';
 import ContactMe from '../assets/header/Contact.png';
 import './Contact.css';
 

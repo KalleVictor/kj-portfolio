@@ -46,7 +46,7 @@
   transform: 3s ease;
 }
 
-.profile-picture {
+.profile-card .profile-picture {
   width: 120px;
   height: 120px;
   object-fit: cover;

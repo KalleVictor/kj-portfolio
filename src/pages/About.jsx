@@ -13,7 +13,8 @@ import Passion from '../assets/images/controller.svg';
 import Explorer from '../assets/images/explorer.svg'; 
 
 import flipSound from '../assets/files/flip.mp3';
-import appearSound from '../assets/files/deal.mp3'
+import appearSound from '../assets/files/deal.mp3';
+import flipbackSound from '../assets/files/flipback.mp3';
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -22,6 +23,7 @@ export default function About() {
   const [shakeAbout, setShakeAbout] = useState({});
   const [shakeExtra, setShakeExtra] = useState({});
 
+  
 
   const aboutCards = [
     {
@@ -76,19 +78,34 @@ export default function About() {
 
   const playFlipSound = () => {
     const audio = new Audio(flipSound);
+    audio.volume = 0.5;
+    audio.play();
+  };
+
+  const playFlipBackSound = () => {
+    const audio = new Audio(flipbackSound);
+    audio.volume = 0.5;
     audio.play();
   };
   
   const handleCardClick = (index) => {
-    playFlipSound();
-    if (aboutCards[index].title === 'Did you know?') {
-      setShowExtraCards(true);
+    if (activeIndex === index) {
+      playFlipBackSound(); // Play flip-back sound if card is already active
+    } else {
+      playFlipSound(); // Play flip sound if card is not active
+      if (aboutCards[index].title === 'Did you know?') {
+        setShowExtraCards(true);
+      }
     }
     setActiveIndex(activeIndex === index ? null : index);
   };
-  
+
   const handleExtraCardClick = (index) => {
-    playFlipSound();
+    if (extraActive[index]) {
+      playFlipBackSound(); // Play flip-back sound if card is already active
+    } else {
+      playFlipSound(); // Play flip sound if card is not active
+    }
     setExtraActive(prev => ({
       ...prev,
       [index]: !prev[index],
@@ -143,6 +160,7 @@ export default function About() {
         }));
 
         setTimeout(() => {
+          playFlipBackSound();
           setActiveIndex(null);
           setShakeAbout(prev => {
             const updated = { ...prev };
@@ -163,6 +181,7 @@ export default function About() {
           }));
 
           setTimeout(() => {
+            playFlipBackSound();
             setExtraActive(prev => {
               const updated = { ...prev };
               delete updated[index];
@@ -204,6 +223,8 @@ export default function About() {
         ? handleExtraCardHover(cardIndex, hovering)
         : handleCardHover(index, hovering);
 
+
+        
     return (
       <motion.div
         key={index}
