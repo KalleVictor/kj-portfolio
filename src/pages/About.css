@@ -1,5 +1,7 @@
 .card-deck-wrapper {
   margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .about-card-deck {

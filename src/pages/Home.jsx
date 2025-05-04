@@ -1,15 +1,30 @@
 import React, { useState } from 'react';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import './Home.css';
 import heroimage from '../assets/images/heroimage.png';
 import Welcome from '../assets/header/Welcome.png';
 import Pin from '../assets/images/pin.png';
-import arrow from '../assets/files/arrow.mp3'
+import arrow from '../assets/files/arrow.mp3';
 
+// Animation variants for the card deck (parent)
+const deckVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // 0.2s delay between each card
+    },
+  },
+};
+
+// Animation variants for individual cards (children)
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 }, // Start below and invisible
+  visible: { opacity: 1, y: 0 }, // Animate to position
+};
 
 export default function Home() {
   const [activeCards, setActiveCards] = useState([]);
-  
 
   const cards = [
     {
@@ -17,8 +32,9 @@ export default function Home() {
       body: (
         <>
           <p>
-          I am <strong>Karl-Johan Victor</strong> <em>· Writer · Game Designer · Developer · Creative Technologist ·</em>
-        <img src={heroimage} alt="Hero Image" className="heroImage" />
+            I am <strong>Karl-Johan Victor</strong>{' '}
+            <em>· Writer · Game Designer · Developer · Creative Technologist ·</em>
+            <img src={heroimage} alt="Hero Image" className="heroImage" />
           </p>
         </>
       ),
@@ -62,7 +78,6 @@ export default function Home() {
       ),
       background: 'rgba(213, 213, 214, 0.9)',
     },
-
   ];
 
   const playSound = () => {
@@ -72,11 +87,14 @@ export default function Home() {
   };
 
   return (
- 
-    
-    <div className="card-deck">
+    <motion.div
+      className="card-deck"
+      variants={deckVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="banner2">
-        <img src={Welcome} alt="Welcome" className= "TitleImage" />
+        <img src={Welcome} alt="Welcome" className="TitleImage" />
       </div>
       {cards.map((card, index) => {
         const isActive = activeCards.includes(index);
@@ -90,27 +108,30 @@ export default function Home() {
               transform: isActive ? 'scale(1)' : 'scale(0.8)',
               opacity: isActive ? 1 : 0.4,
             }}
-            whileHover={{ 
-              y: isActive ? -15 : -5, 
-              rotate: isActive ? -4 : 10, 
-              opacity: isActive ? 1 : 0.8}}
+            variants={cardVariants} // Apply card animation
+            whileHover={{
+              y: isActive ? -15 : -5,
+              rotate: isActive ? -4 : 10,
+              opacity: isActive ? 1 : 0.8,
+            }}
             transition={{ type: 'spring', stiffness: 600 }}
             onClick={() => {
               if (!activeCards.includes(index)) {
                 setActiveCards([...activeCards, index]);
                 playSound();
               }
-            }}       
+            }}
           >
             <div className="CardTitleHome">
               <h1>{card.title}</h1>
             </div>
             <div className="CardBody">
-            <img src={Pin} alt="pin" className= "Pin" />{card.body}
+              <img src={Pin} alt="pin" className="Pin" />
+              {card.body}
             </div>
           </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }

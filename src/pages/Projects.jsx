@@ -71,7 +71,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 120 }}
+            transition={{ duration: 1, delay: index * 0.6, type: "spring", stiffness: 120 }}
           >
             <img src={item.image} alt={item.alt} className="project-image" />
             <div className="project-info">
