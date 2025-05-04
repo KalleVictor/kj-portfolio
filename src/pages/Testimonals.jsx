@@ -49,7 +49,15 @@ export default function Testimonials() {
       <div className="testimonials-grid">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card">
-            <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="testimonial-image"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = require('../assets/images/replacementimage.png');
+                }}
+              />
             <h3>{testimonial.name}</h3>
             <h4>{testimonial.title}</h4>
             <TypeAnimation

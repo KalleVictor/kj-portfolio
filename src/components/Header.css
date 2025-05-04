@@ -207,6 +207,8 @@
   }
 }
 
+
+
 .hamburger:focus {
   outline: 2px solid lightblue; 
   outline-offset: 2px;
