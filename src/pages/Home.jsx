@@ -22,7 +22,6 @@ export default function Home() {
               src={heroimage}
               alt="Karl-Johan Victor portrait"
               className="heroImage"
-              loading="lazy"
             />
           </p>
         </>
