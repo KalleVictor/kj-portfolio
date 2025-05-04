@@ -3,8 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
-  animation: fadeIn 0.8s ease-in-out forwards;
+
 }
 
 .ProjectTitleImage {
@@ -18,6 +17,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .project-card {
@@ -49,6 +50,14 @@
 
 .bounce2 {
   animation: shake 0.5s;
+}
+
+@media (max-width: 768px) {
+  .project-card:hover {
+    animation: none;
+    background-color: lightblue;
+    border: solid 1px lightblue;
+  }
 }
 
 .project-image {
