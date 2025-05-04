@@ -53,6 +53,7 @@ export default function Testimonials() {
                 src={testimonial.image}
                 alt={testimonial.name}
                 className="testimonial-image"
+                loading="lazy"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = require('../assets/images/replacementimage.png');

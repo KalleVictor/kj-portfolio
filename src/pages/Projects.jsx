@@ -73,7 +73,7 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 1, delay: index * 0.6, type: "spring", stiffness: 120 }}
           >
-            <img src={item.image} alt={item.alt} className="project-image" />
+            <img src={item.image} alt={item.alt} className="project-image" loading="lazy" />
             <div className="project-info">
               <h3>{item.title}</h3>
               <p>{item.description}</p>

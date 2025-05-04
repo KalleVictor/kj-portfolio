@@ -54,7 +54,7 @@ export default function Contact() {
           )}
           {!showForm ? (
             <>
-              <img src={profilbild} alt="KJ" className="profile-picture" />
+              <img src={profilbild} alt="KJ" className="profile-picture" loading="lazy" />
               <h1>Karl-Johan Victor</h1>
               <p className="title">Fullstack Developer, Game Designer</p>
               <p>Lund University</p>

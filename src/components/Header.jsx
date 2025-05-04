@@ -61,7 +61,6 @@ export default function Header() {
           src={PortfolioHeader}
           alt="Karl-Johan Victor portfolio logo"
           className="titleportfolio"
-          loading="lazy"
         />
         </a>
 
