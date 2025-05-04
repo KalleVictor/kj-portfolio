@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkkj_portfolio=self.webpackChunkkj_portfolio||[]).push([[646],{646:(e,r,l)=>{l.r(r),l.d(r,{default:()=>o});l(43);var n=l(579);function o(){return(0,n.jsx)("div",{className:"CardTitle",children:(0,n.jsx)("h1",{children:"404 Page not found!"})})}}}]);
+//# sourceMappingURL=646.a4cbef59.chunk.js.map
