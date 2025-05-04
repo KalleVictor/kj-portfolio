@@ -53,8 +53,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NoPages />} />
           </Routes>
-          <Testimonials />
         </Suspense>
+        <Testimonials />
       </main>
       <Footer />
     </div>
