@@ -35,7 +35,7 @@
 
 /* The testimonial card */
 .testimonial-card {
-  width: 240px;
+  width: 220px;
   background: #fff;
   padding: 2rem;
   border-radius: 1rem;
@@ -64,12 +64,14 @@
 
 .testimonial-card h3{
   font-size: larger;
+  margin-top: 1rem;
 }
 
 
 .testimonial-card h4{
   font-size: large;
   color: darkgray;
+
 }
 
 .testimonial-card p{
@@ -95,4 +97,21 @@
     width: 100%;
     max-width: 250px;
   }
+}
+
+.testimonial-links {
+
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.testimonial-icon {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.testimonial-icon:hover {
+  color: darkblue; 
+  animation: bounce3 0.6s;
 }

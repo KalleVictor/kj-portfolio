@@ -17,33 +17,27 @@ export default function Contact() {
     setShowForm(false);
   };
 
-  const contactLinks = [
-    {
-      href: 'https://github.com/KalleVictor/',
-      alt: 'GitHub',
-      icon: faGithub,
-    },
-    {
-      href: 'https://www.linkedin.com/in/karl-johan-victor-90197659/',
-      alt: 'LinkedIn',
-      icon: faLinkedin,
-    },
-    {
-      href: 'https://discordapp.com/users/Enarion',
-      alt: 'Discord',
-      icon: faDiscord,
-    },
-    {
-      href: 'tel:+46703152644',
-      alt: 'Phone',
-      icon: faPhone,
-    },
-    {
-      href: 'mailto:karljohan.victor@hotmail.com',
-      alt: 'Email',
-      icon: faEnvelope,
-    },
+  const iconMap = {
+    GitHub: faGithub,
+    LinkedIn: faLinkedin,
+    Discord: faDiscord,
+    Phone: faPhone,
+    Email: faEnvelope,
+  };
+  
+  const linkData = [
+    { type: 'GitHub',   href: 'https://github.com/KalleVictor/' },
+    { type: 'LinkedIn', href: 'https://www.linkedin.com/in/karl-johan-victor-90197659/' },
+    { type: 'Discord',  href: 'https://discordapp.com/users/Enarion' },
+    { type: 'Phone',    href: 'tel:+46703152644' },
+    { type: 'Email',    href: 'mailto:karljohan.victor@hotmail.com' },
   ];
+  
+  const contactLinks = linkData.map(link => ({
+    ...link,
+    alt: link.type,
+    icon: iconMap[link.type],
+  }));
 
   return (
     <div className="contact-wrapper">
