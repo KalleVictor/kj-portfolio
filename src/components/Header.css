@@ -19,7 +19,7 @@
     bottom: 0rem;
     right: 3rem;
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 0.8s ease-in-out forwards;
   }
 
   /* Responsive styles for the header */
@@ -33,7 +33,7 @@
   position: absolute;
   right: 3rem;
   z-index: 1000; /* Ensure the hamburger is above other elements */
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .titleportfolio {
@@ -42,8 +42,6 @@
   left: 0rem;
   height: 90px;
   z-index: 1000;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .header.visible {
