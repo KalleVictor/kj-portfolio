@@ -3,14 +3,14 @@ import { Routes, Route, Navigate } from 'react-router';
 import { lazy, Suspense } from 'react';
 import Home from './pages/Home';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import Testimonials from './pages/Testimonials';
 
 // Lazy-load non-critical components
 const About = lazy(() => import('./pages/About'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NoPages = lazy(() => import('./pages/NoPages'));
-const Testimonials = lazy(() => import('./pages/Testimonals'));
+const Footer = lazy(() => import('./components/Footer'));
 
 // Styled loading spinner for Suspense fallback
 const LoadingSpinner = () => (
