@@ -1,14 +1,14 @@
 
 .TitleImage {
   height: 100px;
-  width: auto;
+  width: 388px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .TitleImage {
     height: 80px;
-    width: auto;
+    width: 311px;
   }
 }
 

@@ -12,6 +12,7 @@
 .heroImage {
   display: block;
   height: 300px;
+  width: 190px;
   border-radius: 12px;
   margin: 0px auto;
   margin-top: 1rem;

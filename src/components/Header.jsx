@@ -57,7 +57,12 @@ export default function Header() {
   return (
     <header className={`header ${isHeaderVisible ? 'visible' : 'hidden'}`}>
          <a href="https://kallevictor.github.io/kj-portfolio/" rel="noopener noreferrer">
-          <img src={PortfolioHeader} alt="Karl-Johan Victor portfolio logo" className="titleportfolio" />
+         <img
+          src={PortfolioHeader}
+          alt="Karl-Johan Victor portfolio logo"
+          className="titleportfolio"
+          loading="lazy"
+        />
         </a>
 
       <button className="hamburger" onClick={toggleMenu} aria-expanded={isMenuOpen}

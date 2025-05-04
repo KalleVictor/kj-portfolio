@@ -12,7 +12,7 @@ const deckVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // 0.2s delay between each card
+      staggerChildren: 0.5, 
     },
   },
 };
@@ -34,7 +34,14 @@ export default function Home() {
           <p>
             I am <strong>Karl-Johan Victor</strong>{' '}
             <em>· Writer · Game Designer · Developer · Creative Technologist ·</em>
-            <img src={heroimage} alt="Hero Image" className="heroImage" />
+            <img
+              src={heroimage}
+              alt="Karl-Johan Victor portrait"
+              className="heroImage"
+              loading="lazy"
+              width="200"
+              height="200"
+            />
           </p>
         </>
       ),
@@ -94,7 +101,7 @@ export default function Home() {
       animate="visible"
     >
       <div className="banner2">
-        <img src={Welcome} alt="Welcome" className="TitleImage" />
+        <img src={Welcome} alt="Welcome" className="TitleImage" loading="lazy" width="300" height="80" />
       </div>
       {cards.map((card, index) => {
         const isActive = activeCards.includes(index);
