@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kj-portfolio/static/css/main.db1b5f15.css",
-    "main.js": "/kj-portfolio/static/js/main.fab4189a.js",
+    "main.js": "/kj-portfolio/static/js/main.eedbb1fa.js",
     "static/css/509.7f43e217.chunk.css": "/kj-portfolio/static/css/509.7f43e217.chunk.css",
     "static/js/509.ed365238.chunk.js": "/kj-portfolio/static/js/509.ed365238.chunk.js",
     "static/css/997.0573dac4.chunk.css": "/kj-portfolio/static/css/997.0573dac4.chunk.css",
@@ -28,13 +28,13 @@
     "static/media/Worksamples.png": "/kj-portfolio/static/media/Worksamples.219056ca79f6d5d2a9dc.png",
     "static/media/personality.svg": "/kj-portfolio/static/media/personality.43264a95fd0650208e2ca62e3b9f365d.svg",
     "static/media/logic.svg": "/kj-portfolio/static/media/logic.4724bfa7fe99c1bc5dcd2fc35a10a022.svg",
-    "static/media/heroimagetiny.avif": "/kj-portfolio/static/media/heroimagetiny.5c13a7fdaca8dabe66b3.avif",
+    "static/media/heroimagetiny.avif": "/kj-portfolio/static/media/heroimagetiny.33122057cc5b89c9498c.avif",
     "static/media/controller.svg": "/kj-portfolio/static/media/controller.a2ebf4914c45fda6f379e6e0a89d7ee0.svg",
     "static/media/quill.svg": "/kj-portfolio/static/media/quill.72ba1ccc67c8b73f38035c2f946f0f35.svg",
     "index.html": "/kj-portfolio/index.html",
     "static/media/DidYouKnow.svg": "/kj-portfolio/static/media/DidYouKnow.7d14a022fea6dcd4fa189578418a99c9.svg",
     "main.db1b5f15.css.map": "/kj-portfolio/static/css/main.db1b5f15.css.map",
-    "main.fab4189a.js.map": "/kj-portfolio/static/js/main.fab4189a.js.map",
+    "main.eedbb1fa.js.map": "/kj-portfolio/static/js/main.eedbb1fa.js.map",
     "509.7f43e217.chunk.css.map": "/kj-portfolio/static/css/509.7f43e217.chunk.css.map",
     "509.ed365238.chunk.js.map": "/kj-portfolio/static/js/509.ed365238.chunk.js.map",
     "997.0573dac4.chunk.css.map": "/kj-portfolio/static/css/997.0573dac4.chunk.css.map",
@@ -48,6 +48,6 @@
   },
   "entrypoints": [
     "static/css/main.db1b5f15.css",
-    "static/js/main.fab4189a.js"
+    "static/js/main.eedbb1fa.js"
   ]
 }
