@@ -23,8 +23,6 @@ export default function Home() {
               alt="Karl-Johan Victor portrait"
               className="heroImage"
               loading="lazy"
-              width="200"
-              height="200"
             />
           </p>
         </>
