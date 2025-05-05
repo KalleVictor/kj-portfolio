@@ -13,7 +13,6 @@ body {
     color: #333; 
     color-scheme: dark;
     box-sizing: border-box; 
-    transition: 0.3s;
   }
 
   html {
