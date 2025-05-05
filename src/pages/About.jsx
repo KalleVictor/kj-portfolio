@@ -200,10 +200,9 @@ export default function About() {
 
   return (
     <div className="card-deck-wrapper">
-      {/* <div className="mainBanner">
+      <div className="mainBanner">
         <h>About Me</h>
-      </div> */}
-
+      </div>
       <div className="about-card-deck">
   {[...aboutCards, ...(showExtraCards ? extraCards : [])].map((card, index) => {
     const totalCards = aboutCards.length;

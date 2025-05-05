@@ -40,9 +40,9 @@ export default function Contact() {
 
   return (
     <div className="contact-wrapper">
-      {/* <div className="mainBanner">
+      <div className="mainBanner">
         <h>Contact</h>
-      </div> */}
+      </div>
 
       <div className="content">
         <div className={`profile-card ${showForm ? 'flipped' : ''}`}>

@@ -78,9 +78,9 @@ export default function Home() {
  
     
     <div className="card-deck">
-      {/* <div className="mainBanner">
+      <div className="mainBanner">
         <h>Welcome!</h>
-      </div> */}
+      </div>
       {cards.map((card, index) => {
         const isActive = activeCards.includes(index);
         return (

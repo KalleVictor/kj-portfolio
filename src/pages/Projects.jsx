@@ -55,9 +55,9 @@ const projectItems = [
 export default function Projects() {
   return (
     <div className="projects-container">
-      {/* <div className="mainBanner">
+      <div className="mainBanner">
         <h>Worksamples</h>
-      </div> */}
+      </div>
       <div className="projects-grid">
         {projectItems.map((item, index) => (
           <motion.a
