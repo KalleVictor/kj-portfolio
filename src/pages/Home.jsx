@@ -84,9 +84,6 @@ export default function Home() {
             src={Welcome}
             alt="Welcome banner"
             className="TitleImage"
-            loading="lazy"
-            width="300"
-            height="100"
           />
       </div>
       {cards.map((card, index) => {
