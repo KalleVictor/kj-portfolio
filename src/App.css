@@ -12,12 +12,13 @@
   }
 }
 
-.banner2 {
+.mainBanner {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 2rem;
+  font-family: Freestyle Script;
+  font-size: 6rem;
 }
 
 .container p {

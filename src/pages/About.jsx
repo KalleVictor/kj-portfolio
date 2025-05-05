@@ -6,7 +6,6 @@ import './About.css';
 
 import Logic from '../assets/images/logic.svg';
 import Personality from '../assets/images/personality.svg';
-import AboutMe from '../assets/header/AboutMe.png';
 import DidYouKnow from '../assets/images/DidYouKnow.svg'; 
 import Quill from '../assets/images/quill.svg'; 
 import Passion from '../assets/images/controller.svg'; 
@@ -201,8 +200,8 @@ export default function About() {
 
   return (
     <div className="card-deck-wrapper">
-      <div className="banner2">
-        <img src={AboutMe} alt="About" className="TitleImage" />
+      <div className="mainBanner">
+        <h>About Me</h>
       </div>
 
       <div className="about-card-deck">

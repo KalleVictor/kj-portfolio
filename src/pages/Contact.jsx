@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
 import profilbild from '../assets/images/profilbild.jpg';
-import ContactMe from '../assets/header/Contact.png';
 import './Contact.css';
 
 export default function Contact() {
@@ -41,8 +40,8 @@ export default function Contact() {
 
   return (
     <div className="contact-wrapper">
-      <div className="title-image-wrapper">
-        <img src={ContactMe} alt="Contact" className="TitleImage" />
+      <div className="mainBanner">
+        <h>Contact</h>
       </div>
 
       <div className="content">

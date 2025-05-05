@@ -6,7 +6,6 @@ import './Testimonials.css';
 import tododonely from '../assets/images/tododonely.png';
 import bloodbowl from '../assets/images/bloodbowl.png';
 import munamii from '../assets/images/munamii.png';
-import Worksamples from '../assets/header/Worksamples.png';
 import portfoliopreview from '../assets/images/PortfolioPreview.png'
 import curriculumvitae from '../assets/images/CurriculumVitae.png';
 
@@ -56,10 +55,9 @@ const projectItems = [
 export default function Projects() {
   return (
     <div className="projects-container">
-      <div>
-        <img src={Worksamples} alt="worksamples" className= "ProjectTitleImage"/>
-      </div>
-
+      {/* <div className="mainBanner">
+        <h>Worksamples</h>
+      </div> */}
       <div className="projects-grid">
         {projectItems.map((item, index) => (
           <motion.a

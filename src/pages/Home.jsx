@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion} from 'framer-motion';
 import './Home.css';
 import heroimage from '../assets/images/heroimagetiny.avif';
-import Welcome from '../assets/header/Welcome.png';
 import Pin from '../assets/images/pin.png';
 import arrow from '../assets/files/arrow.mp3'
 
@@ -79,12 +78,8 @@ export default function Home() {
  
     
     <div className="card-deck">
-      <div className="banner2">
-        <img
-            src={Welcome}
-            alt="Welcome banner"
-            className="TitleImage"
-          />
+      <div className="mainBanner">
+        <h>Welcome!</h>
       </div>
       {cards.map((card, index) => {
         const isActive = activeCards.includes(index);
