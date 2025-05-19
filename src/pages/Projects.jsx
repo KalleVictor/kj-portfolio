@@ -8,6 +8,7 @@ import bloodbowl from '../assets/images/bloodbowl.png';
 import munamii from '../assets/images/munamii.png';
 import portfoliopreview from '../assets/images/PortfolioPreview.png'
 import curriculumvitae from '../assets/images/CurriculumVitae.png';
+import bubblespin from '../assets/images/BubbleSpinPreview.png';
 
 const projectItems = [
   {
@@ -49,6 +50,14 @@ const projectItems = [
     link: 'https://github.com/KalleVictor/ToDoDonelyApp',
     linkType: 'github',
     alt: 'Thumbnail of the ToDoDonely App.'
+  },
+  {
+    image: bubblespin,
+    title: 'BubbleSpin App',
+    description: 'A group project delivering a playful web app for event planning and daily scheduling, with fun, randomized activity suggestions to spark creativity, built with modern web technologies.',
+    link: 'https://zereis.github.io/Event-planner/',
+    linkType: 'website',
+    alt: 'Thumbnail of the Event Planner App.'
   },
 ];
 
