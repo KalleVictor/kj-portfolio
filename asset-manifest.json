@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kj-portfolio/static/css/main.64ad3e50.css",
-    "main.js": "/kj-portfolio/static/js/main.aaf2de48.js",
+    "main.js": "/kj-portfolio/static/js/main.e5bac6fc.js",
     "static/css/479.d637ff76.chunk.css": "/kj-portfolio/static/css/479.d637ff76.chunk.css",
     "static/js/479.0b9f1280.chunk.js": "/kj-portfolio/static/js/479.0b9f1280.chunk.js",
     "static/css/973.108894c4.chunk.css": "/kj-portfolio/static/css/973.108894c4.chunk.css",
@@ -11,6 +11,7 @@
     "static/js/453.6aa1e273.chunk.js": "/kj-portfolio/static/js/453.6aa1e273.chunk.js",
     "static/media/heroimage.png": "/kj-portfolio/static/media/heroimage.f875b2d36cabe22923dc.png",
     "static/media/profilbild.jpg": "/kj-portfolio/static/media/profilbild.3e6b94d3f197d1df3c92.jpg",
+    "static/media/fimproject.png": "/kj-portfolio/static/media/fimproject.2d06cf0b839d1625ce42.png",
     "static/media/bloodbowl.png": "/kj-portfolio/static/media/bloodbowl.e48d676d0c541e87f833.png",
     "static/media/CurriculumVitae.png": "/kj-portfolio/static/media/CurriculumVitae.cce7649caeaa025b157d.png",
     "static/media/BubbleSpinPreview.png": "/kj-portfolio/static/media/BubbleSpinPreview.1d0ff7b11fd9396b9c22.png",
@@ -31,7 +32,7 @@
     "index.html": "/kj-portfolio/index.html",
     "static/media/DidYouKnow.svg": "/kj-portfolio/static/media/DidYouKnow.d33ecb0b69c58275143e0d0a6e206533.svg",
     "main.64ad3e50.css.map": "/kj-portfolio/static/css/main.64ad3e50.css.map",
-    "main.aaf2de48.js.map": "/kj-portfolio/static/js/main.aaf2de48.js.map",
+    "main.e5bac6fc.js.map": "/kj-portfolio/static/js/main.e5bac6fc.js.map",
     "479.d637ff76.chunk.css.map": "/kj-portfolio/static/css/479.d637ff76.chunk.css.map",
     "479.0b9f1280.chunk.js.map": "/kj-portfolio/static/js/479.0b9f1280.chunk.js.map",
     "973.108894c4.chunk.css.map": "/kj-portfolio/static/css/973.108894c4.chunk.css.map",
@@ -42,6 +43,6 @@
   },
   "entrypoints": [
     "static/css/main.64ad3e50.css",
-    "static/js/main.aaf2de48.js"
+    "static/js/main.e5bac6fc.js"
   ]
 }
