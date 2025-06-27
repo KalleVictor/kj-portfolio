@@ -9,6 +9,7 @@ import munamii from '../assets/images/munamii.png';
 import portfoliopreview from '../assets/images/PortfolioPreview.png'
 import curriculumvitae from '../assets/images/CurriculumVitae.png';
 import bubblespin from '../assets/images/BubbleSpinPreview.png';
+import filmimalmo from '../assets/images/fimproject.png';
 
 const projectItems = [
   {
@@ -36,12 +37,12 @@ const projectItems = [
     alt: 'Screenshot of the CV website.'
   },
   {
-    image: munamii,
-    title: 'Munamii Cakery',
-    description: 'A sleek website for Munamii Cakery, showcasing their brand and products with an intuitive, mobile-first design.',
-    link: 'https://kallevictor.github.io/Munamii-React/',
-    linkType: 'website',
-    alt: 'Tumbnail of Munamii Cakery Website'
+    image: filmimalmo,
+    title: 'Film i Malmö App',
+    description: 'Group Project - Developed a React-based web application for Film i Malmö, to manage movie screenings and memberships for the Hypnos theatre. Implemented features for users to view screening schedules, purchase memberships, and access exclusive content, enhancing engagement with the local cinema community. Responsive, user-friendly interface, ensuring seamless navigation and functionality.',
+    link: 'https://github.com/owenboy9/film-i-malmo/',
+    linkType: 'github',
+    alt: 'Thumbnail of Film i Malmö App.'
   },
   {
     image: tododonely,
@@ -58,6 +59,14 @@ const projectItems = [
     link: 'https://zereis.github.io/Event-planner/',
     linkType: 'website',
     alt: 'Thumbnail of the Event Planner App.'
+  },
+  {
+    image: munamii,
+    title: 'Munamii Cakery',
+    description: 'A sleek website for Munamii Cakery, showcasing their brand and products with an intuitive, mobile-first design.',
+    link: 'https://kallevictor.github.io/Munamii-React/',
+    linkType: 'website',
+    alt: 'Tumbnail of Munamii Cakery Website'
   },
 ];
 
