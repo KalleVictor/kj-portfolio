@@ -40,8 +40,8 @@ const projectItems = [
     image: filmimalmo,
     title: 'Film i Malmö App',
     description: 'Group Project - Developed a React-based web application for Film i Malmö, to manage movie screenings and memberships for the Hypnos theatre. Implemented features for users to view screening schedules, purchase memberships, and access exclusive content, enhancing engagement with the local cinema community. Responsive, user-friendly interface, ensuring seamless navigation and functionality.',
-    link: 'https://github.com/owenboy9/film-i-malmo/',
-    linkType: 'github',
+    link: 'https://film-i-malmo.vercel.app/',
+    linkType: 'website',
     alt: 'Thumbnail of Film i Malmö App.'
   },
   {
